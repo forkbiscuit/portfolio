@@ -1,0 +1,63 @@
+{
+  "generated": "2026-04-13",
+  "notes": "No <video> elements or YouTube/Vimeo iframes found on any of the 6 crawled pages. FACEIT Community videos referenced in Portfolio folder (FACEIT-Chat.mov, FACEIT-Dashboard.mov) exist locally but are not embedded in the website.",
+  "embedded_videos": [
+    {
+      "title": "Community dash",
+      "platform": "Vimeo",
+      "vimeo_id": "731094875",
+      "embed_url": "https://player.vimeo.com/video/731094875",
+      "page": "faceitcommunity",
+      "section": "Going hi-fi \u2014 Dashboard",
+      "purpose": "project-related \u2014 demo of Community Dashboard feature",
+      "thumbnail": "https://vimeo.com/731094875"
+    },
+    {
+      "title": "FACEIT-Chat",
+      "platform": "Vimeo",
+      "vimeo_id": "731139020",
+      "embed_url": "https://player.vimeo.com/video/731139020",
+      "page": "faceitcommunity",
+      "section": "Going hi-fi \u2014 Chat demo",
+      "purpose": "project-related \u2014 demo of Chat feature",
+      "thumbnail": "https://vimeo.com/731139020"
+    }
+  ],
+  "portfolio_video_files": [
+    {
+      "local_path": "Portfolio/Community/FACEIT-Chat.mov",
+      "likely_page": "faceit",
+      "status": "not_embedded_on_site \u2014 exists in Portfolio only"
+    },
+    {
+      "local_path": "Portfolio/Community/FACEIT-Dashbaord.mov",
+      "likely_page": "faceit",
+      "status": "not_embedded_on_site \u2014 exists in Portfolio only"
+    },
+    {
+      "local_path": "Portfolio/Insider/IMG_4142.MOV",
+      "likely_page": "evening-standard",
+      "status": "not_embedded_on_site \u2014 exists in Portfolio only"
+    },
+    {
+      "local_path": "Portfolio/Insider/IMG_4143.MOV",
+      "likely_page": "evening-standard",
+      "status": "not_embedded_on_site \u2014 exists in Portfolio only"
+    },
+    {
+      "local_path": "Portfolio/Insider/IMG_4144.MOV",
+      "likely_page": "evening-standard",
+      "status": "not_embedded_on_site \u2014 exists in Portfolio only"
+    },
+    {
+      "local_path": "Portfolio/Insider/IMG_4197.MOV",
+      "likely_page": "evening-standard",
+      "status": "not_embedded_on_site \u2014 exists in Portfolio only"
+    },
+    {
+      "local_path": "Portfolio/Insider/IMG_4197 2.MOV",
+      "likely_page": "evening-standard",
+      "status": "not_embedded_on_site \u2014 exists in Portfolio only"
+    }
+  ]
+}

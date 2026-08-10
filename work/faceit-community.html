@@ -7,40 +7,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Syne+Mono&family=Syne:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0d0d0b;--bg-2:#141412;--ink:#f0efe8;--ink-2:#8a8a7e;--ink-3:#4a4a42;--rule:#252520;--accent:#e8d5a3;--accent-2:#c4a96b}
+:root{--bg:#0d0d0b;--bg-2:#141412;--bg-3:#1c1c19;--ink:#f0efe8;--ink-2:#8a8a7e;--ink-3:    #7e7e76;--rule:#252520;--accent:#e8d5a3;--accent-2:#c4a96b}
 html{scroll-behavior:smooth}
-body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;cursor:none}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;cursor:none}
 .cursor{position:fixed;width:6px;height:6px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
 .cursor-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(232,213,163,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:56px;border-bottom:1px solid var(--rule);background:rgba(13,13,11,.92);backdrop-filter:blur(16px)}
 .nav-logo{text-decoration:none}
-.nav-logo img{height:28px;width:auto;display:block;opacity:.85}
+.nav-logo img{height:28px;width:auto;display:block;opacity:.85;transition:opacity .2s}
+.nav-logo img:hover{opacity:1}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav-links a{font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--accent)}
-.nav-avail{display:flex;align-items:center;gap:7px;font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:.06em}
+.nav-avail{display:flex;align-items:center;gap:7px;font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:.06em}
 .avail-dot{width:6px;height:6px;border-radius:50%;background:#4caf50;animation:pulse 2.5s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .page-wrap{padding-top:56px}
 .page-hero{padding:100px 40px 72px;border-bottom:1px solid var(--rule)}
-.eyebrow{font-family:'Syne Mono',monospace;font-size:11px;color:var(--accent-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.eyebrow{font-family:'Syne Mono',monospace;font-size:13px;color:var(--accent-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
 .eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent-2)}
-.page-hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(24px,4.5vw,56px);font-weight:300;line-height:1.05;letter-spacing:-.03em;color:var(--ink);margin-bottom:28px;max-width:900px}
-.hero-desc{font-size:15px;color:var(--ink-2);max-width:560px;line-height:1.8;border-left:1px solid var(--rule);padding-left:20px}
+.page-hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(36px,6vw,76px);font-weight:300;line-height:1.05;letter-spacing:-.03em;color:var(--ink);margin-bottom:28px;max-width:900px}
+.hero-desc{font-size:18px;color:var(--ink-2);max-width:560px;line-height:1.8;border-left:1px solid var(--rule);padding-left:20px}
 .meta-bar{display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2)}
 .meta-item{display:flex;flex-direction:column;gap:6px}
-.meta-label{font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
-.meta-val{font-size:13px;color:var(--ink)}
+.meta-label{font-family:'Syne Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.meta-val{font-size:15px;color:var(--ink)}
 .section{padding:80px 40px;border-bottom:1px solid var(--rule)}
 .grid{display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start}
-.phase{display:inline-block;font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-bottom:16px}
-h2{font-family:'Unbounded',sans-serif;font-size:clamp(16px,2vw,22px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px}
+.phase{display:inline-block;font-family:'Syne Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-bottom:16px}
+h2{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px}
 h2:first-of-type{margin-top:0}
-h3{font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);margin:32px 0 12px}
-p{font-size:14px;color:var(--ink-2);line-height:1.85;margin-bottom:16px}
+h3{font-family:'Syne Mono',monospace;font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);margin:32px 0 12px}
+p{font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px}
 p strong{color:var(--ink);font-weight:500}
 ul{list-style:none;margin-bottom:20px}
-ul li{font-size:14px;color:var(--ink-2);line-height:1.75;padding:10px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px}
+ul li{font-size:16px;color:var(--ink-2);line-height:1.75;padding:10px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px}
 ul li::before{content:'—';color:var(--accent-2);flex-shrink:0}
 ul li strong{color:var(--ink);font-weight:500}
 .pull{border-left:2px solid var(--accent-2);padding:20px 24px;margin:32px 0;background:var(--bg-2)}
@@ -51,32 +52,45 @@ ul li strong{color:var(--ink);font-weight:500}
 .g2 img:hover,.g3 img:hover{opacity:1}
 .img-full{width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:.85;transition:opacity .2s}
 .img-full:hover{opacity:1}
-.caption{font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:.04em;margin-top:-16px;margin-bottom:24px}
+.caption{font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:.04em;margin-top:-16px;margin-bottom:24px}
 .divider{height:1px;background:var(--rule);margin:48px 0}
 .stat{border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px}
-.stat-n{font-family:'Unbounded',sans-serif;font-size:36px;font-weight:300;color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:8px}
-.stat-l{font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:.06em}
+.stat-n{font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:8px}
+.stat-l{font-family:'Syne Mono',monospace;font-size:13px;color:var(--ink-2);letter-spacing:.06em}
 .sidebar{position:sticky;top:80px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;font-family:'Syne Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--rule);cursor:none;color:var(--ink-2);background:transparent;transition:all .2s;margin-bottom:24px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;font-family:'Syne Mono',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--rule);cursor:none;color:var(--ink-2);background:transparent;transition:all .2s;margin-bottom:24px}
 .btn:hover{border-color:var(--ink-2);color:var(--ink)}
 .case-nav{display:flex;justify-content:space-between;align-items:center;padding:32px 40px}
-.case-nav a{font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.case-nav a{font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .2s}
 .case-nav a:hover{color:var(--accent)}
 footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--rule)}
-.footer-copy{font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:.06em}
+.footer-copy{font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:.06em}
 .footer-links{display:flex;gap:24px;list-style:none}
-.footer-links a{font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+.footer-links a{font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
 .footer-links a:hover{color:var(--accent)}
 .footer-links li::before{display:none}
 .footer-links li{border:none;padding:0}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
+.next-project{display:block;text-decoration:none;padding:80px 40px 100px;border-top:2px solid var(--accent-2);background:var(--bg-2);transition:background .35s;cursor:none}
+.next-project:hover{background:var(--bg-3)}
+.next-project-label{display:block;font-family:'Syne Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:56px}
+.next-project-eyebrow{font-family:'Syne Mono',monospace;font-size:12px;color:var(--accent-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.next-project-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent-2);flex-shrink:0}
+.next-project-title{font-family:'Unbounded',sans-serif;font-size:clamp(36px,6vw,80px);font-weight:300;letter-spacing:-.03em;color:#ffffff;line-height:1.0;margin-bottom:24px;max-width:1000px}
+.next-project-desc{font-size:16px;color:var(--ink);max-width:600px;line-height:1.8;margin-bottom:40px}
+.next-project-cta{display:inline-flex;align-items:center;gap:12px;font-family:'Syne Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;transition:gap .25s,color .25s}
+.next-project-cta svg{stroke:currentColor;transition:transform .25s}
+.next-project:hover .next-project-cta{gap:22px;color:#ffffff}
+.next-project:hover .next-project-cta svg{transform:translateX(4px)}
 @media(max-width:768px){
   body{cursor:auto}.cursor,.cursor-ring{display:none}
   nav{padding:0 20px}.page-hero{padding:80px 20px 56px}
   .section{padding:56px 20px}.meta-bar{padding:24px 20px;gap:24px}
   .grid{grid-template-columns:1fr;gap:40px}
   .g2,.g3{grid-template-columns:1fr}
+  .next-project,footer{padding:48px 20px 64px}
+  footer{padding:24px 20px}
   .case-nav,footer{padding:24px 20px}
   .sidebar{position:static}
   .nav-links li:not(:last-child){display:none}
@@ -85,22 +99,34 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<nav>
-  <a href="#" class="nav-logo">
-    <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2b5466dc-3789-406f-b6ab-fe9bcaf15306/R-Logo-inverted.png" alt="Robert Stuart">
+<nav aria-label="Main navigation">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/R-Logo-inverted.png" alt="Robert Stuart">
   </a>
   <ul class="nav-links">
-    <li><a href="#" class="active">Work</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="../index.html#work" class="active">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
     <li><span class="nav-avail"><span class="avail-dot"></span>Available</span></li>
   </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="page-wrap">
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-avail"><span class="avail-dot"></span>Available</div>
+</div>
+
+<main id="main-content" class="page-wrap">
 
   <div class="page-hero reveal">
     <div class="eyebrow">Product Design · UX Research · Gaming</div>
@@ -126,15 +152,6 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
           <p>Moving to the Community team in February 2022, I was tasked with changing how players experienced community on FACEIT. The target was ambitious: <strong>4X the number of matches played within communities</strong> — taking Monthly Active Players from 100k to 400k, split 300k Counter-Strike and 100k non-CS.</p>
           <p>At the time, communities were split into Hubs and Clans — two separate entities operating just differently enough to confuse new players entirely. To map the chaos, I created an illustrated guide for the wider design and PM team before we touched anything.</p>
           <div class="pull"><p>"What the f€k is a hub?"</p></div>
-          <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/46a94b7c-de79-4eff-902e-576d37408193/Screenshot+2022-06-24+at+14.57.15.png" alt="Hub/Clan map 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/4f765be0-1bf4-4aea-bce4-d29e102fa9c4/Screenshot+2022-06-24+at+14.56.34.png" alt="Hub/Clan map 2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/8eb09adc-f280-42fd-a05a-d7f1639efa8c/Screenshot+2022-06-24+at+14.57.20.png" alt="Hub/Clan map 3">
-          </div>
-          <div class="g2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/69f432e3-fa55-4f6d-bc45-466ac2232ea4/Screenshot+2022-06-24+at+14.57.29.png" alt="Hub/Clan map 4">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/e9832c38-78b7-4337-8344-fddd467580d7/Screenshot+2022-06-24+at+14.58.25.png" alt="Hub/Clan map 5">
-          </div>
         </div>
 
         <div class="divider"></div>
@@ -146,12 +163,12 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
           <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656092687647-GX3QYT7C8ACI14H7FIHU/Screenshot+2022-06-24+at+18.20.51.png" alt="Interview notes" class="img-full">
           <p class="caption">Interviews with six community organisers of varying scale and use-case</p>
           <div class="g2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/4ad7cf38-9b9e-4fc4-b50e-c840d6c9e6d2/Organiser-interview02.png" alt="Interview 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/978ee80a-0f54-4d15-9556-f83efbb4160e/Organiser-interview01.png" alt="Interview 2">
+            <img src="../assets/images/Organiser-interview02.png" alt="Interview 1">
+            <img src="../assets/images/Organiser-interview01.png" alt="Interview 2">
           </div>
           <div class="g2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/025dd33b-d40a-497e-9c45-17b42ed4f81e/Organiser-interview04.png" alt="Interview 3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/cc1e6574-d40a-4876-b01f-f7ab4c701531/Organiser-interview03.png" alt="Interview 4">
+            <img src="../assets/images/Organiser-interview04.png" alt="Interview 3">
+            <img src="../assets/images/Organiser-interview03.png" alt="Interview 4">
           </div>
         </div>
 
@@ -170,7 +187,6 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
             <li><strong>Stats</strong> — FACEIT players are statistic fiends. Modular, per-game, as deep as the user wants to go.</li>
           </ul>
           <p>We pitched the centralisation concept to organisers in our network. The response was unanimous — they wanted in as soon as an MVP shipped.</p>
-          <a href="https://flatworm-saxophone-a8tp.squarespace.com/s/FACEIT-Centralized-Communities-Partner-Deck.pdf" target="_blank" class="btn">View partner deck →</a>
         </div>
 
         <div class="divider"></div>
@@ -179,37 +195,37 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
           <span class="phase">IA and Wireframes</span>
           <h2>Story mapping and structure</h2>
           <p>Story mapping grounded the earliest wireframes in real user behaviour — themes, activities, and individual stories built from the organiser interviews. The solution had to be <strong>mobile-first</strong>: community is always-on, so a friend DMing you to play CS while you're on the sofa is exactly the entry point we were designing for. A three-panel layout gave us flexibility across screen sizes with clear navigation, main content, and a contextual third panel.</p>
-          <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656095783191-ZHR8VQOIJVJNBP9AJG2R/Screenshot+2022-06-24+at+19.36.03.png" alt="Story map" class="img-full">
+          <img src="../assets/images/Frame 1115.png" alt="Story map" class="img-full">
           <p class="caption">Story map — themes, activities, and user stories</p>
-          <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656096548737-6QPHYSMFIR4A2ZY0FHQK/Option+A.png" alt="IA" class="img-full">
+          <img src="../assets/images/Option A.png" alt="IA" class="img-full">
           <p class="caption">Information hierarchy for the community MVP</p>
           <div class="g2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656938365684-8QNDPHE3UQ6P7R7TAKL2/Mobile.png" alt="Mobile wireframes">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656940539789-RFJT802W8N61FXCZD2C2/Desktop.png" alt="Desktop wireframes">
+            <img src="../assets/images/S-Wire-Desktop01.png" alt="Mobile wireframes">
+            <img src="../assets/images/S-Wire-Desktop02.png" alt="Desktop wireframes">
           </div>
 
           <h3>Dashboard</h3>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656951424010-ACP37BXDUKFC0WHWLEB6/S-Wire-prototype-12.png" alt="Wire dashboard 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656951906139-C0H3QEIWEWCVFVQFC1KP/S-Wire-prototype-18.png" alt="Wire dashboard 2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656952406140-SCXV7CD8YWXP4X0CIQVV/S-Wire-prototype-17.png" alt="Wire dashboard 3">
+            <img src="../assets/images/S-Wire-prototype-12.png" alt="Wire dashboard 1">
+            <img src="../assets/images/S-Wire-prototype-18.png" alt="Wire dashboard 2">
+            <img src="../assets/images/S-Wire-prototype-17.png" alt="Wire dashboard 3">
           </div>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656952516900-ZWTPSXGFF8QTTYENAYSF/S-Wire-prototype-15.png" alt="Wire dashboard 4">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656951374833-76M1KE4HFIIC0C936AYQ/S-Wire-prototype-13.png" alt="Wire dashboard 5">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656952433400-USPKEK645UIBMUZ4UT5U/S-Wire-prototype-14.png" alt="Wire dashboard 6">
+            <img src="../assets/images/S-Wire-prototype-15.png" alt="Wire dashboard 4">
+            <img src="../assets/images/S-Wire-prototype-13.png" alt="Wire dashboard 5">
+            <img src="../assets/images/S-Wire-prototype-14.png" alt="Wire dashboard 6">
           </div>
 
           <h3>Chat and leaderboards</h3>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656953057338-Z1PKUTT0DHNGYPBANE9B/S-Wire-prototype-11.png" alt="Wire chat 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656952998861-P0AGLLVV5610SYSGKP84/S-Wire-prototype-03.png" alt="Wire chat 2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656953094155-OYS9I156N7ZSCLKNOTX2/S-Wire-prototype-04.png" alt="Wire chat 3">
+            <img src="../assets/images/S-Wire-prototype-11.png" alt="Wire chat 1">
+            <img src="../assets/images/S-Wire-prototype-03.png" alt="Wire chat 2">
+            <img src="../assets/images/S-Wire-prototype-04.png" alt="Wire chat 3">
           </div>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656953144685-86URWBFA7HI7RAJHDX18/S-Wire-prototype-10.png" alt="Wire LB 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656953181908-4WKUZG8IQ9O3L8N438QJ/S-Wire-prototype-06.png" alt="Wire LB 2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656953341677-67KAC9BOL4RTFM681JD2/S-Wire-prototype-05.png" alt="Wire LB 3">
+            <img src="../assets/images/S-Wire-prototype-10.png" alt="Wire LB 1">
+            <img src="../assets/images/S-Wire-prototype-06.png" alt="Wire LB 2">
+            <img src="../assets/images/S-Wire-prototype-05.png" alt="Wire LB 3">
           </div>
         </div>
 
@@ -221,34 +237,45 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
           <p>After stakeholder sign-off we moved to high-fidelity using FUSE — FACEIT's internal design system. The most significant structural shift was simplifying the left-hand sidebar: moving navigation to a global bottom bar freed the left rail for switching between communities, mirroring patterns players already knew from the FACEIT native app and indirect competitors. Those components are live in production today as the FUSE Panel component.</p>
           <p>One deliberate design decision: I reframed Events beyond tournaments. Communities aren't built on competition alone — they're built on people coming together and having fun. Introducing <strong>Social Gaming events</strong> let organisers create low-pressure sessions away from ELO anxiety.</p>
 
+          <h3>Before — existing hub &amp; clan UI</h3>
+          <div class="g3">
+            <img src="../assets/images/X - 23.png" alt="Existing FACEIT hub experience 1">
+            <img src="../assets/images/X - 24.png" alt="Existing FACEIT hub experience 2">
+            <img src="../assets/images/X - 30.png" alt="Existing FACEIT clan experience 1">
+          </div>
+          <div class="g2">
+            <img src="../assets/images/X - 31.png" alt="Existing FACEIT clan experience 2">
+            <img src="../assets/images/X - 32.png" alt="Existing FACEIT clan experience 3">
+          </div>
+
           <h3>Dashboard — Feed, Live and Events</h3>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544478654-Z1ESX5J20E4KAW8U2MOO/Feed-02.png" alt="Feed">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544586432-S26A6XKZUFL0V2K4T805/Live-01.png" alt="Live">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544720947-96PW46SBQZ9XCZK9LYBB/Calendar-01.png" alt="Calendar">
+            <img src="../assets/images/Feed-02.png" alt="Feed">
+            <img src="../assets/images/Live-01.png" alt="Live">
+            <img src="../assets/images/Calendar-01.png" alt="Calendar">
           </div>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544498588-Q0FWERW1YV5248466WHI/Feed-01.png" alt="Feed 2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544622239-YJOWEGBISWUGBKJSZ7NH/Live-03.png" alt="Live 3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544846898-RAGCDSZ0U83AXRZ5YCBY/Calendar-03.png" alt="Calendar 3">
+            <img src="../assets/images/Feed-01.png" alt="Feed 2">
+            <img src="../assets/images/Live-03.png" alt="Live 3">
+            <img src="../assets/images/Calendar-03.png" alt="Calendar 3">
           </div>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544535979-EYWPEVYSZ1G11EIVOXBT/Feed-03.png" alt="Feed 3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657544649959-S9CP4B98SGW5N00VGZ8Q/Live-04.png" alt="Live 4">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657545543499-DKX1RV711J9RM5UF85O5/Calendar-11.png" alt="Calendar 11">
+            <img src="../assets/images/Feed-03.png" alt="Feed 3">
+            <img src="../assets/images/Live-04.png" alt="Live 4">
+            <img src="../assets/images/Calendar-11.png" alt="Calendar 11">
           </div>
 
           <h3>Chat and Forums</h3>
           <p>After stakeholder discussions we added a forum alongside traditional instant messaging — slower, in-depth discussion for support issues and game guides sitting alongside live chat.</p>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657545899668-OJX3AMK5N55V1SHHTUW4/Chat-01.png" alt="Chat 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657545992375-SOEQRPGRQNL21WSQ1AS2/Forum-01.png" alt="Forum 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657545946717-6Y54Y41N6MNNEUHH6N71/Chat-03.png" alt="Chat 3">
+            <img src="../assets/images/Chat-01.png" alt="Chat 1">
+            <img src="../assets/images/Forum-01.png" alt="Forum 1">
+            <img src="../assets/images/Chat-03.png" alt="Chat 3">
           </div>
           <div class="g3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657546007179-NXBO9TIPYQ7LE1E46SMP/Forum-02.png" alt="Forum 2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657545970553-2DY067I00G7V92L7IG9C/Chat-05.png" alt="Chat 5">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657546026249-Y6OREOU43PPXALWR7VS5/Forum-03.png" alt="Forum 3">
+            <img src="../assets/images/Forum-02.png" alt="Forum 2">
+            <img src="../assets/images/Chat-05.png" alt="Chat 5">
+            <img src="../assets/images/Forum-03.png" alt="Forum 3">
           </div>
         </div>
 
@@ -283,26 +310,32 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
           <div class="stat-l">Community organisers interviewed across 4 months</div>
         </div>
         <div style="border:1px solid var(--rule);padding:20px;margin-top:12px;" class="reveal">
-          <p style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;">Ships in production</p>
-          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;">The three-panel layout from this project became the FUSE Panel component — now live across FACEIT's platform.</p>
+          <p style="font-family:'Syne Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;">Ships in production</p>
+          <p style="font-size:18px;color:var(--ink-2);line-height:1.7;">The three-panel layout from this project became the FUSE Panel component — now live across FACEIT's platform.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="case-nav">
-    <a href="#">← FACEIT</a>
-    <a href="#">Battlefy →</a>
-  </div>
+  <a class="next-project" href="telegraph.html">
+    <span class="next-project-label">Next Project</span>
+    <div class="next-project-eyebrow">Product Design · Media</div>
+    <h2 class="next-project-title">The Telegraph — App redesign &amp; Fantasy Fund</h2>
+    <p class="next-project-desc">Re-framing how you learn what's happening in the world around you. Led the flagship app redesign and a gamified fund manager that overshot its player target by 45%.</p>
+    <div class="next-project-cta">
+      View project
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
 
-</div>
+</main>
 
 <footer>
-  <span class="footer-copy">2026 Robert Stuart — Vancouver, BC</span>
+  <span class="footer-copy">© 2026 Robert Stuart — Vancouver, BC</span>
   <ul class="footer-links">
-    <li><a href="#">Work</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Email</a></li>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
   </ul>
 </footer>
 

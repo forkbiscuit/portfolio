@@ -8,12 +8,14 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<nav>
+<nav aria-label="Main navigation">
   <a href="index.html" class="nav-logo">
-    <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2b5466dc-3789-406f-b6ab-fe9bcaf15306/R-Logo-inverted.png" alt="Robert Stuart">
+    <img src="assets/images/R-Logo-inverted.png" alt="Robert Stuart">
   </a>
   <ul class="nav-links">
     <li><a href="index.html#work">Work</a></li>
@@ -21,9 +23,19 @@
     <li><a href="contact.html" class="active">Contact</a></li>
     <li><span class="nav-avail"><span class="avail-dot"></span>Available</span></li>
   </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="page-wrap">
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-avail"><span class="avail-dot"></span>Available</div>
+</div>
+
+<main id="main-content" class="page-wrap">
 
   <div class="page-hero">
     <div class="page-hero-eyebrow">Contact</div>
@@ -56,17 +68,17 @@
       <form id="contactForm" style="display:flex;flex-direction:column;gap:14px;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
           <div style="display:flex;flex-direction:column;gap:7px;">
-            <label style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Name</label>
-            <input type="text" name="name" placeholder="Your name" required style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;">
+            <label for="name" style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;">
           </div>
           <div style="display:flex;flex-direction:column;gap:7px;">
-            <label style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Email</label>
-            <input type="email" name="email" placeholder="your@email.com" required style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;">
+            <label for="email" style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;">
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;">
-          <label style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Topic</label>
-          <select name="subject" style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;">
+          <label for="subject" style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Topic</label>
+          <select id="subject" name="subject" style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;">
             <option value="">Select a topic</option>
             <option>New project</option>
             <option>Freelance / contract</option>
@@ -75,8 +87,8 @@
           </select>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;">
-          <label style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Message</label>
-          <textarea name="message" placeholder="Tell me what you're working on..." required style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;resize:vertical;min-height:120px;"></textarea>
+          <label for="message" style="font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me what you're working on..." required style="padding:12px 14px;font-family:'Syne',sans-serif;font-size:14px;color:var(--ink);background:var(--bg-2);border:1px solid var(--rule);outline:none;border-radius:0;appearance:none;resize:vertical;min-height:120px;"></textarea>
         </div>
         <div>
           <button type="submit" class="btn btn-primary">Send message</button>
@@ -87,7 +99,7 @@
 
   </div>
 
-</div>
+</main>
 
 <footer>
   <span class="footer-copy">© 2026 Robert Stuart — Vancouver, BC</span>
@@ -98,4 +110,6 @@
   </ul>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-s
+<script src="shared.js"></script>
+</body>
+</html>

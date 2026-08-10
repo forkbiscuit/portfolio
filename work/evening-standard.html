@@ -8,39 +8,42 @@
 <style>
   .case-meta-bar { display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2); }
   .case-meta-item { display:flex;flex-direction:column;gap:6px; }
-  .case-meta-label { font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3); }
-  .case-meta-value { font-size:13px;color:var(--ink); }
+  .case-meta-label { font-family:'Syne Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3); }
+  .case-meta-value { font-size:15px;color:var(--ink); }
   .case-body-grid { display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start; }
-  .case-body-grid h2 { font-family:'Unbounded',sans-serif;font-size:clamp(16px,2vw,22px);font-weight:300;letter-spacing:-0.02em;color:var(--ink);margin:40px 0 16px; }
+  .case-body-grid > div:last-child { position:sticky;top:80px; }
+  .case-body-grid h2 { font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-0.02em;color:var(--ink);margin:40px 0 16px; }
   .case-body-grid h2:first-child { margin-top:0; }
-  .case-body-grid p { font-size:14px;color:var(--ink-2);line-height:1.85;margin-bottom:16px; }
+  .case-body-grid p { font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px; }
   .case-body-grid ul { list-style:none;margin-bottom:20px; }
-  .case-body-grid ul li { font-size:14px;color:var(--ink-2);line-height:1.75;padding:8px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px; }
+  .case-body-grid ul li { font-size:16px;color:var(--ink-2);line-height:1.75;padding:8px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px; }
   .case-body-grid ul li::before { content:'—';color:var(--accent-2);flex-shrink:0; }
   .stat-block { border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px; }
-  .stat-num { font-family:'Unbounded',sans-serif;font-size:36px;font-weight:300;color:var(--accent);letter-spacing:-0.03em;line-height:1;margin-bottom:8px; }
-  .stat-label { font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:0.06em; }
+  .stat-num { font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-0.03em;line-height:1;margin-bottom:8px; }
+  .stat-label { font-family:'Syne Mono',monospace;font-size:13px;color:var(--ink-2);letter-spacing:0.06em; }
   .img-grid { display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0; }
   .img-grid-3 { display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin:24px 0; }
   .img-grid img, .img-grid-3 img { width:100%;display:block;border:1px solid var(--rule);opacity:0.85;transition:opacity 0.2s; }
   .img-grid img:hover, .img-grid-3 img:hover { opacity:1; }
   .img-full { width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:0.85;transition:opacity 0.2s; }
   .img-full:hover { opacity:1; }
-  .img-caption { font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:0.04em;margin-top:-16px;margin-bottom:24px; }
+  .img-caption { font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:0.04em;margin-top:-16px;margin-bottom:24px; }
   .case-nav { display:flex;justify-content:space-between;align-items:center;padding:32px 40px; }
-  .case-nav a { font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s; }
+  .case-nav a { font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s; }
   .case-nav a:hover { color:var(--accent); }
-  @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .img-grid,.img-grid-3{grid-template-columns:1fr;} .case-nav{padding:24px 20px;} }
+  @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .case-body-grid > div:last-child{position:static;} .img-grid,.img-grid-3{grid-template-columns:1fr;} .case-nav{padding:24px 20px;} }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<nav>
+<nav aria-label="Main navigation">
   <a href="../index.html" class="nav-logo">
-    <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2b5466dc-3789-406f-b6ab-fe9bcaf15306/R-Logo-inverted.png" alt="Robert Stuart">
+    <img src="../assets/images/R-Logo-inverted.png" alt="Robert Stuart">
   </a>
   <ul class="nav-links">
     <li><a href="../index.html#work" class="active">Work</a></li>
@@ -48,9 +51,19 @@
     <li><a href="../contact.html">Contact</a></li>
     <li><span class="nav-avail"><span class="avail-dot"></span>Available</span></li>
   </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="page-wrap">
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-avail"><span class="avail-dot"></span>Available</div>
+</div>
+
+<main id="main-content" class="page-wrap">
 
   <div class="page-hero">
     <div class="page-hero-eyebrow">Brand · Media</div>
@@ -81,8 +94,8 @@
           </ul>
 
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657622843462-TQZRTZ8MCY44EL4NRDP7/ES+image.jpeg" alt="Evening Standard Insider">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657622842475-1ZLHXRZIIG8568CBU0OA/ES+banner-3.jpg" alt="Insider banner">
+            <img src="../assets/images/ES-image.jpeg" alt="Evening Standard Insider">
+            <img src="../assets/images/ES-banner-3.jpg" alt="Insider banner">
           </div>
         </div>
 
@@ -92,8 +105,8 @@
           <p>After writing it out some 100+ times using different techniques and mediums, I landed on a variant I liked. After digitising it and making small tweaks, Insider's logo was ready.</p>
 
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657581232407-EYLJNYA3TMQ526KR9HMN/IMG_6196.jpeg" alt="Logo sketches">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657581551084-SDOQFH0G8FD4VF2Q1URG/Insider-BrandGuidelines-pg29.jpeg" alt="Brand guidelines">
+            <img src="../assets/images/IMG_6196.jpeg" alt="Logo sketches">
+            <img src="../assets/images/Insider-BrandGuidelines-pg29.jpeg" alt="Brand guidelines">
           </div>
         </div>
 
@@ -102,13 +115,48 @@
           <p>Adding colour to Insider was tricky. We didn't want a restrictive brand palette that could clash with beautiful imagery. Insider was image-first from the start — so it worked to develop a varying colour field technique to add flourish and accentuate imagery. Taking inspiration from Mondrian, Kandinsky, Turrell and Newman, these colour fields turned images into recognisable Insider "artwork."</p>
 
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/853e78cf-11fc-4649-b09b-361a2099e95e/Insider_BrandGuidelines_Page_18.png" alt="Colour guidelines 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/9f1f6297-4fbe-4049-b27b-c9205e7ea24d/Insider_BrandGuidelines_Page_19.png" alt="Colour guidelines 2">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_18.png" alt="Colour guidelines 1">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_19.png" alt="Colour guidelines 2">
           </div>
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/8d9d9ef2-766d-4074-a27a-ca5a0bc77c88/Insider_BrandGuidelines_Page_20.png" alt="Colour guidelines 3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/f17df466-bd13-40db-8f97-4a2e4cdeb90e/Insider_BrandGuidelines_Page_21.png" alt="Colour guidelines 4">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_20.png" alt="Colour guidelines 3">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_21.png" alt="Colour guidelines 4">
           </div>
+        </div>
+
+        <div class="reveal">
+          <h2>Typography</h2>
+          <p>GT Sectra was chosen as the primary typeface — a contemporary serif with distinctive ink trap details that felt luxurious without being stiff. The pairing with a clean grotesque for captions and metadata created a hierarchy that worked beautifully across long-form editorial and short social cards alike.</p>
+
+          <div class="img-grid">
+            <img src="../assets/images/Insider-Typography1.jpeg" alt="Typography guidelines 1">
+            <img src="../assets/images/Insider-Typography2.jpeg" alt="Typography guidelines 2">
+          </div>
+          <div class="img-grid">
+            <img src="../assets/images/Insider-Typography3.jpeg" alt="Typography guidelines 3">
+            <img src="../assets/images/Insider-Typography4.jpeg" alt="Typography guidelines 4">
+          </div>
+          <div class="img-grid">
+            <img src="../assets/images/Insider-Typography5.jpeg" alt="Typography guidelines 5">
+            <img src="../assets/images/Insider-Typography6.jpeg" alt="Typography guidelines 6">
+          </div>
+          <p class="img-caption">Insider brand guidelines — typography</p>
+        </div>
+
+        <div class="reveal">
+          <h2>Brand guidelines</h2>
+          <p>The full brand guidelines documented every touchpoint — colour fields, typography pairings, image treatment rules, and social templates — to allow editorial and the social team to produce on-brand content independently without needing a designer in the loop for every piece.</p>
+
+          <div class="img-grid">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_18.png" alt="Brand guidelines page 18">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_19.png" alt="Brand guidelines page 19">
+          </div>
+          <div class="img-grid">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_20.png" alt="Brand guidelines page 20">
+            <img src="../assets/images/Insider_BrandGuidelines_Page_21.png" alt="Brand guidelines page 21">
+          </div>
+          <img src="../assets/images/Insider_BrandGuidelines_Page_24.png" alt="Brand guidelines page 24" class="img-full">
+          <p class="img-caption">Insider brand guidelines — colour and image treatment</p>
         </div>
 
         <div class="reveal">
@@ -116,13 +164,9 @@
           <p>Keen for Insider to be instantly recognisable at a feed level without checking the username, I created a Photoshop template using the colour field technique and trained the social team in using it. The site was designed mobile-first, bringing the colour field technique through as accents below images.</p>
 
           <div class="img-grid-3">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/956f8c99-a717-49a3-bbfd-199cd0fa6baa/Insider%2Bsocial%2B1.png" alt="Social post 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/3f0f47ff-267b-430a-a4b4-50f79147293a/Insider%2Bsocial%2B2.png" alt="Social post 2">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2be9df7f-0c36-48bb-bde1-19a7419807af/Insider%2Bsocial%2B3.png" alt="Social post 3">
-          </div>
-          <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/0023f405-d8c2-403a-a424-551defb2cf7a/IMG_4407.png" alt="Mobile 1">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/8f92dc76-8592-44ab-9c1a-cfcf7a337044/IMG_4408.png" alt="Mobile 2">
+            <img src="../assets/images/Insider-social-1.png" alt="Social post 1">
+            <img src="../assets/images/Insider-social-2.png" alt="Social post 2">
+            <img src="../assets/images/Insider-social-3.png" alt="Social post 3">
           </div>
         </div>
 
@@ -145,20 +189,28 @@
     </div>
   </div>
 
-  <div class="case-nav">
-    <a href="telegraph.html">← The Telegraph</a>
-    <a href="independent.html">The Independent →</a>
-  </div>
+  <a class="next-project" href="independent.html">
+    <span class="next-project-label">Next Project</span>
+    <div class="next-project-eyebrow">Brand · Product · Media</div>
+    <h2 class="next-project-title">The Independent — Premium rebrand &amp; app</h2>
+    <p class="next-project-desc">Breaking news as it happens, not after. Rebranded Independent Minds to Independent Premium across 250+ touchpoints in two weeks, then built the brand new app.</p>
+    <div class="next-project-cta">
+      View project
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
 
-</div>
+</main>
 
 <footer>
   <span class="footer-copy">© 2026 Robert Stuart — Vancouver, BC</span>
   <ul class="footer-links">
     <li><a href="../index.html#work">Work</a></li>
     <li><a href="../about.html">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#97e5f8f5f2e5e3b9e4e3e2f6e5e3aea3d7f0faf6fefbb9f4f8fa">Email</a></li>
+    <li><a href="../contact.html">Contact</a></li>
   </ul>
 </footer>
 
-<scri
+<script src="../shared.js"></script>
+</body>
+</html>

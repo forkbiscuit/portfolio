@@ -1,0 +1,1115 @@
+[
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2b5466dc-3789-406f-b6ab-fe9bcaf15306/R-Logo-inverted.png",
+    "local_filename": "R-Logo-inverted.png",
+    "pages": [
+      "work",
+      "battlefy",
+      "faceit",
+      "telegraph",
+      "evening-standard",
+      "independent"
+    ],
+    "alt_text": "Robert Stuart \u00b7 Senior Product Designer",
+    "purpose": "logo",
+    "dimensions": "1000x1041",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/R-Logo-inverted.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1681758320720-HR87CJ83Z5XQHXO6FPKT/Anvil.png",
+    "local_filename": "Anvil.png",
+    "pages": [
+      "work"
+    ],
+    "alt_text": "Battlefy",
+    "purpose": "thumbnail",
+    "dimensions": "2949x1658",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1654805582288-KOC7G43EA18AW55J7UJP/FACEIT-background.jpeg",
+    "local_filename": "FACEIT-background.jpeg",
+    "pages": [
+      "work"
+    ],
+    "alt_text": "FACEIT",
+    "purpose": "thumbnail",
+    "dimensions": "5120x1990",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/FACEIT-background.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1654432516369-UXT2NE4HEXFXA50DWZGB/Telegraph-banner.jpeg",
+    "local_filename": "Telegraph-banner.jpeg",
+    "pages": [
+      "work"
+    ],
+    "alt_text": "The Telegraph",
+    "purpose": "thumbnail",
+    "dimensions": "2949x1658",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph-banner.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657589086717-FCAMA4PCGJY9EJCHDCYY/Insider+banner.jpeg",
+    "local_filename": "Insider-banner.jpeg",
+    "pages": [
+      "work",
+      "evening-standard"
+    ],
+    "alt_text": "Evening Standard",
+    "purpose": "thumbnail",
+    "dimensions": "2303x1296",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1660296579074-QPAUMRGWIAFO/ce146008-4d81-11e9-8f44-fe4a86c48b33.jpeg",
+    "local_filename": "Independent-banner.jpeg",
+    "pages": [
+      "work",
+      "independent"
+    ],
+    "alt_text": "The Independent",
+    "purpose": "thumbnail",
+    "dimensions": "3145x1769",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Independent/ce146008-4d81-11e9-8f44-fe4a86c48b33.jpeg",
+    "confidence": "exact_original_name",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/04141076-9c1d-4185-b638-68c0d1624b11/Anvil.png",
+    "local_filename": "battlefy-Anvil-hero.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "hero",
+    "dimensions": "2949x1658",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/d4b5a985-7e09-44bd-b712-023a7b4f5c71/Screenshot+2023-04-17+at+12.23.02+PM.png",
+    "local_filename": "battlefy-portal-screenshot-1.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "1600x1035",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/5d1ec20c-700a-4988-92a3-fd60f32cc02e/Screenshot+2023-04-17+at+12.23.17+PM.png",
+    "local_filename": "battlefy-portal-screenshot-2.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "1600x1035",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/85336629-c310-4da8-8276-f47669bd8aa5/Screenshot+2023-04-17+at+12.24.16+PM.png",
+    "local_filename": "battlefy-portal-screenshot-3.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "1600x1035",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/df11ef1a-3aca-48c3-828e-15766f377245/Arcade-splash.png",
+    "local_filename": "Arcade-splash.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "Arcade-splash.png",
+    "purpose": "mockup",
+    "dimensions": "2211x1574",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/6441e621-4a97-4864-a4f1-85208ebe14e4/battlefy-1.png",
+    "local_filename": "battlefy-portal-layout-1.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "1044x1129",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/b2156aa8-3ee8-4a43-a12e-182b71443e41/battlefy+2.png",
+    "local_filename": "battlefy-portal-layout-2.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "1044x1129",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/77d32d88-666a-4bb5-bbb2-1285760a1d1c/battlefy+1.png",
+    "local_filename": "battlefy-portal-layout-3.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "1044x1129",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/58305563-36f1-48a6-abca-99f28b8cd901/base.png",
+    "local_filename": "battlefy-component-base.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "960x1285",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/9a9f2973-184a-4aea-af0a-de39fb7dfdd3/button.png",
+    "local_filename": "battlefy-component-button.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "969x1282",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/c1823ad8-50d0-4900-bdec-b35c02abbd32/Screenshot+2023-04-18+at+10.58.14+AM.png",
+    "local_filename": "battlefy-storybook-screenshot.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "2143x1722",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/ccc0e6e6-c2da-4e61-a435-a71be5ac9223/Screenshot+2023-04-17+at+7.47.48+PM.png",
+    "local_filename": "battlefy-homepage-screenshot-1.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "2080x1346",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/16b82cf6-3c64-47c3-8fb0-e7225e25ca4e/Screenshot+2023-04-17+at+3.54.12+PM.png",
+    "local_filename": "battlefy-homepage-screenshot-2.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "2080x1346",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/a4088dc5-1902-4713-b9d8-83fb581eb3c4/woah.png",
+    "local_filename": "battlefy-3d-woah.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "woah.png",
+    "purpose": "mockup",
+    "dimensions": "1451x966",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/ddb61614-ec09-44f1-8f34-5640be64c88b/wohwh.png",
+    "local_filename": "battlefy-3d-wohwh.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "wohwh.png",
+    "purpose": "mockup",
+    "dimensions": "1121x800",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/7fa041ee-32e3-4c23-9db6-c82f49c12a4e/eh.png",
+    "local_filename": "battlefy-3d-eh.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "eh.png",
+    "purpose": "mockup",
+    "dimensions": "1121x800",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/cor.png",
+    "local_filename": "battlefy-3d-cor.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "cor.png",
+    "purpose": "mockup",
+    "dimensions": "996x800",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/anvil.png",
+    "local_filename": "battlefy-3d-anvil.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "anvil.png",
+    "purpose": "mockup",
+    "dimensions": "1352x966",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/d1.png",
+    "local_filename": "battlefy-hp-desktop-1.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "931x665",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/d2.png",
+    "local_filename": "battlefy-hp-desktop-2.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "931x665",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/m1.png",
+    "local_filename": "battlefy-hp-mobile-1.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "366x887",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/m2.png",
+    "local_filename": "battlefy-hp-mobile-2.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "366x887",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/MVP.png",
+    "local_filename": "battlefy-hp-stage-1-MVP.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "First stage",
+    "purpose": "mockup",
+    "dimensions": "2702x1760",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Homepage_Overhaul.png",
+    "local_filename": "battlefy-hp-stage-2-overhaul.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "Second stage",
+    "purpose": "mockup",
+    "dimensions": "2702x1760",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Full_Build.png",
+    "local_filename": "battlefy-hp-stage-3-full.png",
+    "pages": [
+      "battlefy"
+    ],
+    "alt_text": "Final stage",
+    "purpose": "mockup",
+    "dimensions": "2702x1760",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1654431555194-IC3I51QY4Q1WGYH6XYL3/Comm+Clash+Clan+Card+4.png",
+    "local_filename": "faceit-comm-clash-clan-card.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "1787x663",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/8e71e4e6-458d-418b-b6ca-fe919071ae2f/www.faceit.com_en_clan_2920d286-a408-4cf7-8241-82516185b99e_Pimp%27s%2520Clan+%285%29.png",
+    "local_filename": "faceit-clan-updated-modal.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "Updated modal",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/753f5552-a8f3-4d8d-b565-fba43c706730/www.faceit.com_en_clan_2920d286-a408-4cf7-8241-82516185b99e_Pimp%27s%2520Clan+%281%29.png",
+    "local_filename": "faceit-clan-example.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "An example Clan during a Community Clash",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/c7ec3437-bba3-44d9-9eba-1afe1f6e47aa/www.faceit.com_en_clan_2920d286-a408-4cf7-8241-82516185b99e_Pimp%27s%2520Clan+%282%29.png",
+    "local_filename": "faceit-clan-leaderboard.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "The new Clan leaderboard",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/cf09f2e6-1ce3-4a88-858c-dabf5b3be390/www.faceit.com_en_clan_2920d286-a408-4cf7-8241-82516185b99e_Pimp%27s%2520Clan+%286%29.png",
+    "local_filename": "faceit-solo-leaderboard.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "The new Solo leaderboard",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/faceit-clan-previous.png",
+    "local_filename": "faceit-clan-previous.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "Previous design",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Hackathon-1.png",
+    "local_filename": "faceit-hackathon-onboarding.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "Onboarding for the new gamemode",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Hackathon-2.png",
+    "local_filename": "faceit-hackathon-landing.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "Early mockups of first landing screen",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Hackathon-3.png",
+    "local_filename": "faceit-hackathon-feature-loop.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "Visual walk through of our feature loop",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Hackathon-4.png",
+    "local_filename": "faceit-hackathon-points.png",
+    "pages": [
+      "faceit"
+    ],
+    "alt_text": "Early stages of how I could balance points between different games",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1654817755431-1N19230ORWIZ7WUE10P6/Telegraph+Header.png",
+    "local_filename": "Telegraph-Header.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "hero",
+    "dimensions": "1474x921",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1654815463470-D2HFMB023LEJD54NLU8K/Telegraph+sections.png",
+    "local_filename": "Telegraph-sections.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "3839x2119",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1656437068160-4U35M7EFARDS9OYZ0J54/Navigation-tests-ipad2.jpeg",
+    "local_filename": "Navigation-tests-ipad2.jpeg",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "process",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/Navigation-tests-ipad2.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/46ceef37-7f0a-40bf-af64-ec3c7998c21a/Navigation-tests-ipad3.JPG",
+    "local_filename": "Navigation-tests-ipad3.JPG",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "process",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/Navigation-tests-ipad3.JPG",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/b9eb3392-f95f-449a-81c2-5302d48a0654/TelegraphApp-01.png",
+    "local_filename": "TelegraphApp-01.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "Homepage",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/TelegraphApp-01.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/e11fc068-2fa0-4f0c-80c1-8c5c4d7da1e4/TelegraphApp-03.png",
+    "local_filename": "TelegraphApp-03.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/TelegraphApp-03.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/TelegraphApp-04.png",
+    "local_filename": "TelegraphApp-04.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/TelegraphApp-04.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/TelegraphApp-06.png",
+    "local_filename": "TelegraphApp-06.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/TelegraphApp-06.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/TelegraphApp-14.png",
+    "local_filename": "TelegraphApp-14.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/TelegraphApp-14.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/TelegraphApp-15.png",
+    "local_filename": "TelegraphApp-15.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/TelegraphApp-15.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/TelegraphApp-17.png",
+    "local_filename": "TelegraphApp-17.png",
+    "pages": [
+      "telegraph"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Telegraph/TelegraphApp-17.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657622843462-TQZRTZ8MCY44EL4NRDP7/ES+image.jpeg",
+    "local_filename": "ES-image.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "hero",
+    "dimensions": "1000x563",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657622842475-1ZLHXRZIIG8568CBU0OA/ES+banner-3.jpg",
+    "local_filename": "ES-banner-3.jpg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "hero",
+    "dimensions": "824x464",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657622843723-NC1PJV31EUUHSNG676X1/ES+banner-2.jpg",
+    "local_filename": "ES-banner-2.jpg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "hero",
+    "dimensions": "825x546",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657581232407-EYLJNYA3TMQ526KR9HMN/IMG_6196.jpeg",
+    "local_filename": "IMG_6196.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "photo",
+    "dimensions": "3839x2879",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/IMG_6196.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657581294740-E5BCMCY80ZJEYP94QJ0L/IMG_6194.jpeg",
+    "local_filename": "IMG_6194.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "photo",
+    "dimensions": "3839x2879",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/IMG_6194.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657581551084-SDOQFH0G8FD4VF2Q1URG/Insider-BrandGuidelines-pg29.jpeg",
+    "local_filename": "Insider-BrandGuidelines-pg29.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "3071x1535",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider-BrandGuidelines-pg29.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/b7670f24-ccd8-4cd2-9c64-0a73a12daeb0/Insider-Typography4.jpeg",
+    "local_filename": "Insider-Typography4.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider-Typography4.jpeg",
+    "purpose": "diagram",
+    "dimensions": "1520x760",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider-Typography4.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/6fc51a3d-678b-424b-952d-ce03f3d864f7/Insider-Typography3.jpeg",
+    "local_filename": "Insider-Typography3.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider-Typography3.jpeg",
+    "purpose": "diagram",
+    "dimensions": "1520x760",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider-Typography3.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/f699b7ea-c14b-47c2-8f41-0f3513f85683/Insider-Typography2.jpeg",
+    "local_filename": "Insider-Typography2.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider-Typography2.jpeg",
+    "purpose": "diagram",
+    "dimensions": "1520x760",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider-Typography2.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/fc55676e-445d-45e6-8b11-a5d04e3f1fdd/Insider-Typography1.jpeg",
+    "local_filename": "Insider-Typography1.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider-Typography1.jpeg",
+    "purpose": "diagram",
+    "dimensions": "1520x760",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider-Typography1.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/31764395-1b3a-4272-aee5-a98bad2423d5/Insider-Typography5.jpeg",
+    "local_filename": "Insider-Typography5.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider-Typography5.jpeg",
+    "purpose": "diagram",
+    "dimensions": "1520x760",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider-Typography5.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/96b94319-d210-4612-8345-23bb928a8120/Insider-Typography6.jpeg",
+    "local_filename": "Insider-Typography6.jpeg",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider-Typography6.jpeg",
+    "purpose": "diagram",
+    "dimensions": "1520x760",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider-Typography6.jpeg",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/9f1f6297-4fbe-4049-b27b-c9205e7ea24d/Insider_BrandGuidelines_Page_19.png",
+    "local_filename": "Insider_BrandGuidelines_Page_19.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider_BrandGuidelines_Page_19.png",
+    "purpose": "diagram",
+    "dimensions": "2986x1493",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider_BrandGuidelines_Page_19.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Insider_BrandGuidelines_Page_20.png",
+    "local_filename": "Insider_BrandGuidelines_Page_20.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider_BrandGuidelines_Page_20.png",
+    "purpose": "diagram",
+    "dimensions": "2986x1493",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider_BrandGuidelines_Page_20.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Insider_BrandGuidelines_Page_21.png",
+    "local_filename": "Insider_BrandGuidelines_Page_21.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider_BrandGuidelines_Page_21.png",
+    "purpose": "diagram",
+    "dimensions": "2986x1493",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider_BrandGuidelines_Page_21.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/Insider_BrandGuidelines_Page_18.png",
+    "local_filename": "Insider_BrandGuidelines_Page_18.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "Insider_BrandGuidelines_Page_18.png",
+    "purpose": "diagram",
+    "dimensions": "2986x1493",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider_BrandGuidelines_Page_18.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1657588431238-VX66MQ4F9XFBRNDE0AFJ/Insider_BrandGuidelines_Page_24.png",
+    "local_filename": "Insider_BrandGuidelines_Page_24.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "0x0",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Insider/Insider_BrandGuidelines_Page_24.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/956f8c99-a717-49a3-bbfd-199cd0fa6baa/Insider%2Bsocial%2B1.png",
+    "local_filename": "Insider-social-1.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/3f0f47ff-267b-430a-a4b4-50f79147293a/Insider%2Bsocial%2B2.png",
+    "local_filename": "Insider-social-2.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2be9df7f-0c36-48bb-bde1-19a7419807af/Insider%2Bsocial%2B3.png",
+    "local_filename": "Insider-social-3.png",
+    "pages": [
+      "evening-standard"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "0x0",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1660296770272-YU0C04FETPAH6W1KU8E9/ce146008-4d81-11e9-8f44-fe4a86c48b33.jpeg",
+    "local_filename": "Independent-hero.jpeg",
+    "pages": [
+      "independent"
+    ],
+    "alt_text": "",
+    "purpose": "hero",
+    "dimensions": "3145x1769",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Independent/ce146008-4d81-11e9-8f44-fe4a86c48b33.jpeg",
+    "confidence": "exact_original_name",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1658710936944-JLYGDHDBB2NDLX4B7YDK/minds-to-premium.png",
+    "local_filename": "minds-to-premium.png",
+    "pages": [
+      "independent"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "491x307",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Independent/minds-to-premium.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1658698825995-X2Y2HMJRJ7ITUV1TQSDC/Premium-palette-wide.gif",
+    "local_filename": "Premium-palette-wide.gif",
+    "pages": [
+      "independent"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "614x208",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Independent/Premium-palette-wide.gif",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1658701762236-SSNO13S6VROFLO4L6580/Initial+Design+Library",
+    "local_filename": "Initial-Design-Library.png",
+    "pages": [
+      "independent"
+    ],
+    "alt_text": "",
+    "purpose": "diagram",
+    "dimensions": "575x366",
+    "source_method": "failed",
+    "portfolio_path": null,
+    "confidence": null,
+    "status": "download_failed: <urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1658704800386-2W44QFHK27OYH5NV02AF/Sellingpage-Desktop.png",
+    "local_filename": "Sellingpage-Desktop.png",
+    "pages": [
+      "independent"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "767x1287",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Independent/Sellingpage-Desktop.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1658704819352-RJEK8XOO7RPOVKSTRSK9/Sellingpage-Mob.png",
+    "local_filename": "Sellingpage-Mob.png",
+    "pages": [
+      "independent"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "230x1261",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Independent/Sellingpage-Mob.png",
+    "confidence": "exact",
+    "status": "ok"
+  },
+  {
+    "original_url": "https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/1658481938-Independent-Premium-AppStore.png",
+    "local_filename": "Independent-Premium-AppStore.png",
+    "pages": [
+      "independent"
+    ],
+    "alt_text": "",
+    "purpose": "mockup",
+    "dimensions": "571x1202",
+    "source_method": "copied_from_portfolio",
+    "portfolio_path": "Portfolio/Independent/Independent-Premium-AppStore.png",
+    "confidence": "exact",
+    "status": "ok"
+  }
+]
