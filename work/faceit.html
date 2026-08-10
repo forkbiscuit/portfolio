@@ -8,39 +8,51 @@
 <style>
   .case-meta-bar { display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2); }
   .case-meta-item { display:flex;flex-direction:column;gap:6px; }
-  .case-meta-label { font-family:'Syne Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3); }
-  .case-meta-value { font-size:13px;color:var(--ink); }
+  .case-meta-label { font-family:'Syne Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3); }
+  .case-meta-value { font-size:15px;color:var(--ink); }
   .case-body-grid { display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start; }
-  .case-body-grid h2 { font-family:'Unbounded',sans-serif;font-size:clamp(16px,2vw,22px);font-weight:300;letter-spacing:-0.02em;color:var(--ink);margin:40px 0 16px; }
+  .case-body-grid > div:last-child { position:sticky;top:80px; }
+  .case-body-grid h2 { font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-0.02em;color:var(--ink);margin:40px 0 16px; }
   .case-body-grid h2:first-child { margin-top:0; }
-  .case-body-grid p { font-size:14px;color:var(--ink-2);line-height:1.85;margin-bottom:16px; }
+  .case-body-grid p { font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px; }
   .case-body-grid ul { list-style:none;margin-bottom:20px; }
-  .case-body-grid ul li { font-size:14px;color:var(--ink-2);line-height:1.75;padding:8px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px; }
+  .case-body-grid ul li { font-size:16px;color:var(--ink-2);line-height:1.75;padding:8px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px; }
   .case-body-grid ul li::before { content:'—';color:var(--accent-2);flex-shrink:0; }
   .stat-block { border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px; }
-  .stat-num { font-family:'Unbounded',sans-serif;font-size:36px;font-weight:300;color:var(--accent);letter-spacing:-0.03em;line-height:1;margin-bottom:8px; }
-  .stat-label { font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:0.06em; }
+  .stat-num { font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-0.03em;line-height:1;margin-bottom:8px; }
+  .stat-label { font-family:'Syne Mono',monospace;font-size:13px;color:var(--ink-2);letter-spacing:0.06em; }
   .img-grid { display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0; }
   .img-grid img { width:100%;display:block;border:1px solid var(--rule);opacity:0.85;transition:opacity 0.2s; }
   .img-grid img:hover { opacity:1; }
   .img-full { width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:0.85;transition:opacity 0.2s; }
   .img-full:hover { opacity:1; }
-  .img-caption { font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:0.04em;margin-top:-16px;margin-bottom:24px; }
+  .img-caption { font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:0.04em;margin-top:-16px;margin-bottom:24px; }
   .case-nav { display:flex;justify-content:space-between;align-items:center;padding:32px 40px; }
-  .case-nav a { font-family:'Syne Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s; }
+  .case-nav a { font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s; }
   .case-nav a:hover { color:var(--accent); }
   .secret-block { border:1px solid var(--rule);background:var(--bg-2);padding:32px;text-align:center;margin:24px 0; }
-  @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .img-grid{grid-template-columns:1fr;} .case-nav{padding:24px 20px;} }
+  .featured-link { display:flex;align-items:center;justify-content:space-between;padding:24px;border:1px solid var(--rule);background:var(--bg-2);text-decoration:none;transition:background 0.2s,border-color 0.2s;margin:24px 0; }
+  .featured-link:hover { background:var(--bg-3);border-color:var(--ink-3); }
+  .featured-link-meta { font-family:'Syne Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-2);margin-bottom:8px; }
+  .featured-link-title { font-family:'Unbounded',sans-serif;font-size:16px;font-weight:300;color:var(--ink);letter-spacing:-0.02em;margin-bottom:6px; }
+  .featured-link-desc { font-size:17px;color:var(--ink-2);line-height:1.7; }
+  .featured-link-arrow { width:36px;height:36px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s; }
+  .featured-link:hover .featured-link-arrow { background:var(--accent);border-color:var(--accent); }
+  .featured-link-arrow svg { width:14px;height:14px;stroke:var(--ink-3);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s; }
+  .featured-link:hover .featured-link-arrow svg { stroke:var(--bg); }
+  @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .case-body-grid > div:last-child{position:static;} .img-grid{grid-template-columns:1fr;} .case-nav{padding:24px 20px;} }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<nav>
+<nav aria-label="Main navigation">
   <a href="../index.html" class="nav-logo">
-    <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2b5466dc-3789-406f-b6ab-fe9bcaf15306/R-Logo-inverted.png" alt="Robert Stuart">
+    <img src="../assets/images/R-Logo-inverted.png" alt="Robert Stuart">
   </a>
   <ul class="nav-links">
     <li><a href="../index.html#work" class="active">Work</a></li>
@@ -48,9 +60,19 @@
     <li><a href="../contact.html">Contact</a></li>
     <li><span class="nav-avail"><span class="avail-dot"></span>Available</span></li>
   </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="page-wrap">
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-avail"><span class="avail-dot"></span>Available</div>
+</div>
+
+<main id="main-content" class="page-wrap">
 
   <div class="page-hero">
     <div class="page-hero-eyebrow">Product Design · Gaming</div>
@@ -75,12 +97,12 @@
           <p>Together with a PM, I created a new system with two separate leaderboards so players could track both individual progress and their clan's standing. I also introduced match-gated lobbies requiring a minimum number of on-platform matches to counter smurfing — directly responding to user feedback.</p>
 
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/8e71e4e6-458d-418b-b6ca-fe919071ae2f/www.faceit.com_en_clan_2920d286-a408-4cf7-8241-82516185b99e_Pimp%27s%2520Clan+%285%29.png" alt="Clan leaderboard">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/753f5552-a8f3-4d8d-b565-fba43c706730/www.faceit.com_en_clan_2920d286-a408-4cf7-8241-82516185b99e_Pimp%27s%2520Clan+%281%29.png" alt="Clan page">
+            <img src="../assets/images/faceit-clan-leaderboard.png" alt="Clan leaderboard">
+            <img src="../assets/images/faceit-clan-example.png" alt="Clan page">
           </div>
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/c7ec3437-bba3-44d9-9eba-1afe1f6e47aa/www.faceit.com_en_clan_2920d286-a408-4cf7-8241-82516185b99e_Pimp%27s%2520Clan+%282%29.png" alt="Updated modal">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/85e67684-1b36-410c-977c-89b1cecbfcd6/www.faceit.com_en_clan_773a2269-d9cb-4b88-8610-767048471fe4_testclan.png" alt="Solo leaderboard">
+            <img src="../assets/images/faceit-clan-updated-modal.png" alt="Updated modal">
+            <img src="../assets/images/faceit-solo-leaderboard.png" alt="Solo leaderboard">
           </div>
         </div>
 
@@ -89,22 +111,29 @@
           <p>Organised by engineering managers within FACEIT, we ran a 24-hour hackathon. Alongside a PM and two developers, I created a fully functional prototype of a platform-wide domination game — players earned points through matches and spent them to deploy and battle communities for control of a map.</p>
 
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/21e8f11e-c86b-4fa0-9e0a-dc4687f09e08/Hackathon-1.png" alt="Hackathon onboarding">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/ba55468d-c31e-4e8f-b04f-2df551100fa3/Hackathon-2.png" alt="Hackathon map">
+            <img src="../assets/images/faceit-hackathon-Onboarding-01.png" alt="Hackathon onboarding">
+            <img src="../assets/images/faceit-hackathon-landing.png" alt="Hackathon map">
           </div>
           <div class="img-grid">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/fd1c4889-0db5-445c-a704-5bcf3f531f8e/Hackathon-3.png" alt="Feature loop">
-            <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/c0432fd5-2fe2-4421-9b6f-0a329b379a3c/Hackathon-4.png" alt="Points balancing">
+            <img src="../assets/images/faceit-hackathon-feature-loop.png" alt="Feature loop">
+            <img src="../assets/images/faceit-hackathon-Recruiting-01.png" alt="Points balancing">
           </div>
         </div>
 
         <div class="reveal">
-          <h2>Secret project</h2>
-          <div class="secret-block">
-            <p style="font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:0.06em;margin-bottom:12px;">Password protected — pre-release NDA</p>
-            <p style="font-size:13px;color:var(--ink-2);margin-bottom:20px;">There's a large community project here that I can't share publicly. Get in touch and I'll walk you through it.</p>
-            <a href="../contact.html" class="btn btn-ghost" style="display:inline-flex;">Request access →</a>
-          </div>
+          <h2>Community Experiences</h2>
+          <p>A four-month deep dive into redesigning how FACEIT's 800k+ monthly active players experienced community — from the first confused visit to an active, engaged member. Involved user interviews, story mapping, IA design, wireframing, and hi-fi execution. The three-panel layout from this project shipped as the FUSE Panel component and is live in production today.</p>
+
+          <a href="faceit-community.html" class="featured-link">
+            <div>
+              <div class="featured-link-meta">Deep dive · UX Research</div>
+              <div class="featured-link-title">FACEIT Community Experiences</div>
+              <div class="featured-link-desc">4x target · 85% bounce rate addressed · 800k MAU · shipped to production</div>
+            </div>
+            <div class="featured-link-arrow">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
         </div>
 
         <div class="reveal">
@@ -137,20 +166,28 @@
     </div>
   </div>
 
-  <div class="case-nav">
-    <a href="battlefy.html">← Battlefy</a>
-    <a href="telegraph.html">The Telegraph →</a>
-  </div>
+  <a class="next-project" href="faceit-community.html">
+    <span class="next-project-label">Next Project</span>
+    <div class="next-project-eyebrow">Product Design · UX Research · Gaming</div>
+    <h2 class="next-project-title">FACEIT Community Experiences</h2>
+    <p class="next-project-desc">Community has always been at the heart of an enjoyable gaming experience. A four-month deep dive into reimagining how 800k+ monthly players experienced community on one of the world's largest esports platforms.</p>
+    <div class="next-project-cta">
+      View project
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
 
-</div>
+</main>
 
 <footer>
   <span class="footer-copy">© 2026 Robert Stuart — Vancouver, BC</span>
   <ul class="footer-links">
     <li><a href="../index.html#work">Work</a></li>
     <li><a href="../about.html">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#22504d404750560c5156574350561b1662454f434b4e0c414d4f">Email</a></li>
+    <li><a href="../contact.html">Contact</a></li>
   </ul>
 </footer>
 
-<scri
+<script src="../shared.js"></script>
+</body>
+</html>

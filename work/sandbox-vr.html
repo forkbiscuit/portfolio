@@ -3,46 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sandbox VR — Robert Stuart</title>
+<title>Sandbox VR Design System — Robert Stuart</title>
 <link rel="stylesheet" href="../style.css">
 <style>
-  .case-meta-bar {
-    display: flex; gap: 40px; flex-wrap: wrap;
-    padding: 32px 40px; border-bottom: 1px solid var(--rule);
-    background: var(--bg-2);
-  }
-  .case-meta-item { display: flex; flex-direction: column; gap: 6px; }
-  .case-meta-label { font-family: 'Syne Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
-  .case-meta-value { font-size: 13px; color: var(--ink); }
-  .case-body-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start; }
-  .case-body-grid h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(16px, 2vw, 22px); font-weight: 300; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 16px; }
-  .case-body-grid p { font-size: 14px; color: var(--ink-2); line-height: 1.85; margin-bottom: 20px; }
-  .case-body-grid ul { list-style: none; margin-bottom: 20px; }
-  .case-body-grid ul li { font-size: 14px; color: var(--ink-2); line-height: 1.75; padding: 8px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 12px; }
-  .case-body-grid ul li::before { content: '—'; color: var(--accent-2); flex-shrink: 0; }
-  .stat-block { border: 1px solid var(--rule); background: var(--bg-2); padding: 24px; margin-bottom: 12px; }
-  .stat-num { font-family: 'Unbounded', sans-serif; font-size: 36px; font-weight: 300; color: var(--accent); letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
-  .stat-label { font-family: 'Syne Mono', monospace; font-size: 11px; color: var(--ink-3); letter-spacing: 0.06em; }
-  .img-block { width: 100%; border: 1px solid var(--rule); display: block; margin-bottom: 2px; }
-  .img-caption { font-family: 'Syne Mono', monospace; font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em; margin-bottom: 32px; }
-  .case-nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 40px; }
-  .case-nav a { font-family: 'Syne Mono', monospace; font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
-  .case-nav a:hover { color: var(--accent); }
-  @media (max-width: 768px) {
-    .case-meta-bar { padding: 24px 20px; gap: 24px; }
-    .case-body-grid { grid-template-columns: 1fr; gap: 40px; }
-    .case-nav { padding: 24px 20px; }
-  }
+  .case-meta-bar { display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2); }
+  .case-meta-item { display:flex;flex-direction:column;gap:6px; }
+  .case-meta-label { font-family:'Syne Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3); }
+  .case-meta-value { font-size:15px;color:var(--ink); }
+  .case-body-grid { display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start; }
+  .case-body-grid > div:last-child { position:sticky;top:80px; }
+  .case-body-grid h2 { font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-0.02em;color:var(--ink);margin:40px 0 16px; }
+  .case-body-grid h2:first-child { margin-top:0; }
+  .case-body-grid p { font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px; }
+  .case-body-grid ul { list-style:none;margin-bottom:20px; }
+  .case-body-grid ul li { font-size:16px;color:var(--ink-2);line-height:1.75;padding:8px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px; }
+  .case-body-grid ul li::before { content:'—';color:var(--accent-2);flex-shrink:0; }
+  .stat-block { border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px; }
+  .stat-num { font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-0.03em;line-height:1;margin-bottom:8px; }
+  .stat-label { font-family:'Syne Mono',monospace;font-size:13px;color:var(--ink-2);letter-spacing:0.06em; }
+  .img-full { width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:0.85;transition:opacity 0.2s; }
+  .img-full:hover { opacity:1; }
+  .img-caption { font-family:'Syne Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:0.04em;margin-top:8px;margin-bottom:24px; }
+  @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .case-body-grid > div:last-child{position:static;} }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<nav>
+<nav aria-label="Main navigation">
   <a href="../index.html" class="nav-logo">
-    <img src="https://images.squarespace-cdn.com/content/v1/629c712786824f17a12797c1/2b5466dc-3789-406f-b6ab-fe9bcaf15306/R-Logo-inverted.png" alt="Robert Stuart">
+    <img src="../assets/images/R-Logo-inverted.png" alt="Robert Stuart">
   </a>
   <ul class="nav-links">
     <li><a href="../index.html#work" class="active">Work</a></li>
@@ -50,65 +44,149 @@
     <li><a href="../contact.html">Contact</a></li>
     <li><span class="nav-avail"><span class="avail-dot"></span>Available</span></li>
   </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="page-wrap">
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-avail"><span class="avail-dot"></span>Available</div>
+</div>
+
+<main id="main-content" class="page-wrap">
 
   <div class="page-hero">
-    <div class="page-hero-eyebrow">Product Design · VR / Location-based</div>
-    <h1>Sandbox VR</h1>
-    <p class="page-hero-desc">Add your Sandbox VR project overview here — what were you tasked with, what was the context, and what was the outcome?</p>
+    <div class="page-hero-eyebrow">Design Systems · UI Foundations · Sandbox VR · 2023–Present</div>
+    <h1>Built from nothing.<br>Used by everyone.</h1>
+    <p class="page-hero-desc">How I went from a four-colour brand doc to a design system that runs across every Sandbox VR product.</p>
   </div>
 
   <div class="case-meta-bar">
     <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Senior UX/UI Designer</span></div>
-    <div class="case-meta-item"><span class="case-meta-label">Timeline</span><span class="case-meta-value">2022 – present</span></div>
-    <div class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Product, Brand, In-venue</span></div>
-    <div class="case-meta-item"><span class="case-meta-label">Tools</span><span class="case-meta-value">Figma, After Effects</span></div>
+    <div class="case-meta-item"><span class="case-meta-label">Timeline</span><span class="case-meta-value">2023 – Present</span></div>
+    <div class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Design System, Primitives, Components</span></div>
+    <div class="case-meta-item"><span class="case-meta-label">Tools</span><span class="case-meta-value">Figma, Token Studio</span></div>
   </div>
 
   <div class="section-inner">
     <div class="case-body-grid">
-      <div class="reveal">
-        <h2>Overview</h2>
-        <p>Replace this with your Sandbox VR project description. What were the key challenges? What did you design? What was your process?</p>
-        <p>You can add as many sections as you need — just paste your content here and I'll format it to match the rest of the case studies.</p>
+      <div>
 
-        <h2 style="margin-top:40px;">What I worked on</h2>
-        <ul>
-          <li>Add your key projects and contributions here</li>
-          <li>Each bullet becomes a formatted list item</li>
-          <li>Include any metrics or outcomes you have</li>
-        </ul>
+        <div class="reveal">
+          <h2>Overview</h2>
+          <p>When I joined Sandbox VR in July 2023, the design foundation was basically a mood board. Four brand colours, some glamour shots of a concept store. That's it.</p>
+          <p>Developers were hardcoding everything. Every button, every input — built from scratch, every time, slightly differently. Nothing was reusable. Nothing was consistent. And as the only designer, I had no source of truth to point at. Neither did anyone else.</p>
+          <p>So I built one.</p>
+        </div>
+
+        <div class="reveal">
+          <h2>The problem</h2>
+          <p>The tricky bit: the system had to work across two very different environments. There's the digital product — booking flows, experience pages, account stuff. And then there's the physical in-store world — signage, hardware interfaces, in-venue UX. Both needed to feel like the same thing.</p>
+          <p>The mess I was working with:</p>
+          <ul>
+            <li>Devs rebuilding UI from scratch on every ticket</li>
+            <li>Type, colour, and spacing all over the place</li>
+            <li>No handoff process — decisions lived in people's heads</li>
+            <li>Every new project or IP collab meant starting from zero</li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <h2>Start with the foundations</h2>
+          <img src="../assets/images/DesignSystem-1.png" alt="Figma variables panel showing semantic colour tokens and typography scale across light and dark modes" class="img-full">
+          <p class="img-caption">Colour tokens and typography scale across light and dark modes</p>
+          <p>I started with primitives — the raw values everything else inherits from. The system runs across two token levels.</p>
+          <p>At the primitive level, tokens use code-style naming that maps to actual values. brand.trigger.full is blue/700. brand.darkGrey.alt/900 is your darkest surface. These are the atoms.</p>
+          <p>The semantic level sits above that and makes things human-readable — color/surface/base, color/text/high, color/icon/full. Designers and devs talk in semantics. The primitives sit underneath doing the work quietly. It means if a value changes — new theme, dark mode update, rebrand — you change it once, at the primitive level, and it flows through everything.</p>
+          <p>Typography got a full overhaul too. When I joined, type was a mess — bold here, italic there, no logic. Replaced it with a proper scale, H0 down through body and utility styles.</p>
+        </div>
+
+        <div class="reveal">
+          <h2>Iconography</h2>
+          <img src="../assets/images/DesignSystem-5.png" alt="Custom Sandbox VR prop icons — headset, pistol, vest, rifle, tracker and wand — organised by component naming convention" class="img-full">
+          <p class="img-caption">Custom prop iconography — headset, pistol, vest, rifle, tracker, wand</p>
+          <p>I built a set of custom icons for Sandbox VR's physical props — headsets, vests, trackers, wands — then used Google Material to backfill the utility stuff. Arrows, chevrons, add/remove, that kind of thing. Custom where it matters, sourced where it doesn't.</p>
+        </div>
+
+        <div class="reveal">
+          <h2>Components</h2>
+          <img src="../assets/images/DesignSystem-2.png" alt="Figma canvas showing the full button component library — all states, sizes, and colour variants" class="img-full">
+          <p class="img-caption">Full button component library — all states, sizes, and colour variants</p>
+          <p>Once the foundations were solid, I tackled the high-traffic stuff first. Buttons, text fields, nav, footers. All designed with accessibility in mind, built to work with how modern search actually surfaces content.</p>
+          <p>The goal was never a reference doc people dread opening. It was a lego kit — grab what you need, build, ship.</p>
+          <img src="../assets/images/DesignSystem-4.png" alt="Text input components showing all states across light and dark modes, including RTL Arabic variants for global markets" class="img-full">
+          <p class="img-caption">Text inputs across all states — including RTL Arabic variants for global markets</p>
+          <p>The system was built for global use from the start. Text inputs include full RTL Arabic variants. Not an afterthought — baked in from the beginning.</p>
+        </div>
+
+        <div class="reveal">
+          <h2>System in context</h2>
+          <img src="../assets/images/DesignSystem-3.png" alt="Figma canvas showing the stepper component alongside a real booking summary UI with live pricing data" class="img-full">
+          <p class="img-caption">Stepper component alongside a real booking summary — the system working in the wild</p>
+          <p>This is the stepper component sitting next to a real booking summary — actual pricing, real product names, production layout. Not a demo. The system working in the wild.</p>
+        </div>
+
+        <div class="reveal">
+          <h2>How it's maintained</h2>
+          <p>I didn't build it and call it done. That's how systems go stale.</p>
+          <p>Primitives are pretty much set-and-forget — the bedrock doesn't shift much. But the component and iconography files are kept live, with weekly dev syncs to make sure both sides stay in sync when something changes.</p>
+          <p>Design trends get considered, not chased. The system doesn't bend to every aesthetic shift — but it does respond when something genuinely changes how users expect things to work.</p>
+        </div>
+
+        <div class="reveal">
+          <h2>The proof</h2>
+          <p>When Netflix House launched, an admin panel needed to go live fast. Devs built it with almost no design input — pulled straight from the system, implemented it, shipped it.</p>
+          <p>That's the whole point. Build the tool well enough that it works without you in the room.</p>
+        </div>
+
       </div>
 
-      <div class="reveal">
-        <div class="stat-block">
-          <div class="stat-num">—</div>
-          <div class="stat-label">Add a key metric here</div>
+      <div>
+        <div class="stat-block reveal">
+          <div class="stat-num">130+</div>
+          <div class="stat-label">Product tickets shipped using system components</div>
         </div>
-        <div class="stat-block">
-          <div class="stat-num">—</div>
-          <div class="stat-label">Add another metric here</div>
+        <div class="stat-block reveal">
+          <div class="stat-num">105</div>
+          <div class="stat-label">Semantic tokens across light and dark modes</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Figma library files — Primitives, Iconography, Components</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Designer running the entire product surface, digital and physical</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="case-nav">
-    <a href="../index.html#work">← All work</a>
-    <a href="battlefy.html">Battlefy →</a>
-  </div>
+  <a class="next-project" href="battlefy.html">
+    <span class="next-project-label">Next Project</span>
+    <div class="next-project-eyebrow">Product Design · Esports</div>
+    <h2 class="next-project-title">Battlefy — Esports from the ground up</h2>
+    <p class="next-project-desc">0–1'd an entire design system for the world's top esports tournament platform, targeting a 50% reduction in design and dev cost per project.</p>
+    <div class="next-project-cta">
+      View project
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
 
-</div>
+</main>
 
 <footer>
   <span class="footer-copy">© 2026 Robert Stuart — Vancouver, BC</span>
   <ul class="footer-links">
     <li><a href="../index.html#work">Work</a></li>
     <li><a href="../about.html">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#34465b565146401a4740415546400d00745359555d581a575b59">Email</a></li>
+    <li><a href="../contact.html">Contact</a></li>
   </ul>
 </footer>
 
-<scri
+<script src="../shared.js"></script>
+</body>
+</html>
