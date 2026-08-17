@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Syne+Mono&family=Syne:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Jost:wght@300;400;500&family=Syne:wght@400;500&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -65,8 +65,8 @@ nav {
 .nav-logo img:hover { opacity: 1; }
 .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
 .nav-links a {
-  font-family: 'Syne Mono', monospace;
-  font-size: 17px;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
   color: var(--ink-3);
   text-decoration: none;
   letter-spacing: 0.1em;
@@ -78,8 +78,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-family: 'Syne Mono', monospace;
-  font-size: 17px;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
   color: var(--ink-3);
   letter-spacing: 0.06em;
 }
@@ -102,7 +102,7 @@ nav {
   margin-bottom: 64px;
 }
 .section-num {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 12px;
   color: var(--accent-2);
   letter-spacing: 0.1em;
@@ -123,7 +123,7 @@ nav {
   border-bottom: 1px solid var(--rule);
 }
 .page-hero-eyebrow {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 12px;
   color: var(--accent-2);
   letter-spacing: 0.14em;
@@ -163,7 +163,7 @@ nav {
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -186,14 +186,14 @@ footer {
   flex-wrap: wrap;
 }
 .footer-copy {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 12px;
   color: var(--ink-3);
   letter-spacing: 0.06em;
 }
 .footer-links { display: flex; gap: 24px; list-style: none; }
 .footer-links a {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 12px;
   color: var(--ink-3);
   text-decoration: none;
@@ -219,7 +219,7 @@ footer {
 .next-project:hover { background: var(--bg-3); }
 .next-project-label {
   display: block;
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 12px;
   color: var(--accent);
   letter-spacing: 0.14em;
@@ -227,7 +227,7 @@ footer {
   margin-bottom: 56px;
 }
 .next-project-eyebrow {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
   color: var(--accent-2);
   letter-spacing: 0.14em;
@@ -265,7 +265,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
   color: var(--accent);
   letter-spacing: 0.1em;
@@ -338,7 +338,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
   color: var(--ink-3);
   letter-spacing: 0.06em;
@@ -352,7 +352,7 @@ footer {
   padding: 12px 24px;
   background: var(--accent);
   color: var(--bg);
-  font-family: 'Syne Mono', monospace;
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
