@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Killing the Queue — Sandbox VR Check-in · Robert Stuart</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.eyebrow{font-family:'Jost',sans-serif;font-size:13px;color:var(--accent-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent-2)}
+.hero-desc{font-size:18px;color:var(--ink-2);max-width:560px;line-height:1.8;border-left:1px solid var(--rule);padding-left:20px}
+.meta-bar{display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2)}
+.meta-item{display:flex;flex-direction:column;gap:6px}
+.meta-label{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.meta-val{font-size:15px;color:var(--ink)}
+.section{padding:80px 40px;border-bottom:1px solid var(--rule)}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start}
+.sidebar{position:sticky;top:80px}
+.phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-bottom:16px}
+h2{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px}
+h2:first-of-type{margin-top:0}
+p{font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px}
+p strong{color:var(--ink);font-weight:500}
+ul{list-style:none;}
+ul li{font-size:16px;color:var(--ink-2);line-height:1.75;padding:10px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px}
+ul li::before{content:'—';color:var(--accent-2);flex-shrink:0}
+ul li strong{color:var(--ink);font-weight:500}
+ul.def-list li{display:flex;gap:24px;align-items:baseline}
+ul.def-list li::before{display:none}
+ul.def-list li strong{flex:0 0 auto;min-width:180px;font-weight:500;color:var(--ink)}
+ul.def-list li span{color:var(--ink-2)}
+.nav-links li{padding:0;border-bottom:none}
+.nav-links li::before{content:none}
+.footer-links li::before{display:none}
+.footer-links li{border:none;padding:0}
+.mobile-menu ul li{padding:0;border-bottom:none}
+.mobile-menu ul li::before{content:none}
+.pull{border-left:2px solid var(--accent-2);padding:20px 24px;margin:32px 0;background:var(--bg-2)}
+.pull p{font-family:'Unbounded',sans-serif;font-size:clamp(14px,1.8vw,20px);font-weight:300;color:var(--ink);line-height:1.4;letter-spacing:-.02em;margin:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0}
+.g2 img{width:100%;display:block;border:1px solid var(--rule);opacity:.85;transition:opacity .2s}
+.g2 img:hover{opacity:1}
+.img-full{width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:.85;transition:opacity .2s}
+.img-full:hover{opacity:1}
+.caption{font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);letter-spacing:.04em;margin-top:-16px;margin-bottom:24px}
+.divider{height:1px;background:var(--rule);margin:48px 0}
+.stat{border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px}
+.stat-n{font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:8px}
+.stat-l{font-family:'Jost',sans-serif;font-size:13px;color:var(--ink-2);letter-spacing:.06em}
+@media(max-width:768px){
+  .section{padding:56px 20px}
+  .meta-bar{padding:24px 20px;gap:24px}
+  .grid{grid-template-columns:1fr;gap:40px}
+  .g2{grid-template-columns:1fr}
+  .sidebar{position:static}
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/R-Logo-inverted.png" alt="Robert Stuart">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#work" class="active">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+    <li><span class="nav-avail"><span class="avail-dot"></span>Available</span></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-avail"><span class="avail-dot"></span>Available</div>
+</div>
+
+<main id="main-content" class="page-wrap">
+
+  <div class="page-hero reveal">
+    <div class="eyebrow">UX Design · Mobile Web · Product · Sandbox VR · 2024</div>
+    <h1>Killing the queue.</h1>
+    <p class="hero-desc">How we moved Sandbox VR's check-in off shared kiosks and onto guests' own phones — and shaved 20 minutes off a busy group's arrival.</p>
+  </div>
+
+  <div class="meta-bar">
+    <div class="meta-item"><span class="meta-label">Role</span><span class="meta-val">Senior UX/UI Designer</span></div>
+    <div class="meta-item"><span class="meta-label">Company</span><span class="meta-val">Sandbox VR</span></div>
+    <div class="meta-item"><span class="meta-label">Year</span><span class="meta-val">2024</span></div>
+    <div class="meta-item"><span class="meta-label">Platform</span><span class="meta-val">Mobile Web</span></div>
+    <div class="meta-item"><span class="meta-label">Tools</span><span class="meta-val">Figma, Figma Make</span></div>
+  </div>
+
+  <div class="section">
+    <div class="grid">
+      <div>
+
+        <div class="reveal">
+          <span class="phase">Overview</span>
+          <h2>The issue
+          </h2>
+          <p>Every Sandbox VR guest had to check in on a shared iPad kiosk. Enter your name, your email, your date of birth, whether you've played before, if it was anyone's birthday – all on a public device, often with a group of people behind you getting impatient.</p>
+          <p>For big groups it was a huge bottleneck. For privacy-conscious guests it was an immediate trust wall to climb. And for families with kids, it was a logistical nightmare — minors had a separate flow, which meant separate kiosks, which meant more queuing. Did your kid have an email address? Probably not.</p>
+          <p>The fix? Use the trusted tech that guests brought with them – their phones.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">The Problem</span>
+          <h2>Three kiosks. No autofill. Everyone queuing.</h2>
+          <img src="../assets/images/CheckIn-1.png" alt="Figma canvas showing the full Check-in App user flow across Minor, Adult and Minor, and Adult paths" class="img-full">
+          <p>Three iPad kiosks. No autofill. No pre-loaded booking data. Every person in the group queuing up individually to enter their details from scratch.</p>
+          <p>A common scenario might see a group of ~25 people out for a corporate party or team-building event. With one kiosk, checking in 25 guests could take up to <strong>50 minutes</strong>. That's before anyone's put a headset on.</p>
+          <p>Beyond the time problem, there was a trust problem. Handing over personal information on a shared public screen isn't something everyone's comfortable with. We heard that clearly when we talked to both in-store staff and the internal ops and infrastructure teams — guests were visibly hesitant, and staff knew it.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">Research &amp; Approach</span>
+          <h2>Talking to the people who saw it every day</h2>
+          <p>We started by talking to people — in-store staff who watched the kiosk flow play out every day, and internal ops and infra teams who understood the system constraints. That gave us a clear picture of where the friction was and what mattered most to fix.</p>
+          <p>Two priorities came out of that:</p>
+          <ul class="def-list">
+            <li><strong>Win trust from the start</strong><span>guests needed to feel comfortable handing over their details</span></li>
+            <li><strong>Cut check-in time</strong><span>especially for large groups and families</span></li>
+          </ul>
+          <p>From there we mapped the existing flow, looked hard at where steps could be cut or collapsed, and wireframed a leaner version. We used <strong>Figma Make</strong> to get a rough POC in front of people quickly before moving to HiFi, then ran internal user testing before launch.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">The Solution</span>
+          <h2>Check in on your own phone</h2>
+          <div class="g2">
+            <img src="../assets/images/CheckIn-2.png" alt="Mobile check-in screen asking guests to select: An Adult, An Adult and Minors, or Minor(s)">
+            <img src="../assets/images/CheckIn-3.png" alt="Mobile screen for entering minor guest names with option to add additional minors">
+          </div>
+          <p>A mobile web app. Guests scan a QR code — either from a confirmation email before they arrive, or from the kiosk when they get to the venue — and check in on their own phone in their own browser.</p>
+          <p>The first question is simple: <strong>who's checking in?</strong> An adult, an adult and minors, or minors only. That single choice branches the flow correctly and sets everything up from there.</p>
+          <p>Personal info comes first — the booker enters their own details. If there are minors in the group, they're added afterwards, with the parent signing the waiver on their own device on behalf of their kids. No separate kiosk flow. No second queue. One parent handles the whole family.</p>
+          <p>The waiver is signed digitally, in the same flow, on the guest's own phone. That's the trust piece — it's your device, your browser, your data. Not a shared screen.</p>
+          <div class="pull"><p>From not checked in to fully ready: 5 steps.</p></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">The Flow in Detail</span>
+          <h2>Simple surface, complex underneath</h2>
+          <img src="../assets/images/CheckIn-4.png" alt="Complete user flow diagram showing all check-in paths including waiver signing and confirmation states" class="img-full">
+          <p>The flow handles three distinct paths — adult only, adult with minors, and minors only — all branching from that first screen. Edge cases are covered too: removing a player, error states, language selection, future booking states. The full flow map gives a sense of how much complexity sits underneath what feels like a simple 5-step process.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">Impact</span>
+          <h2>20 minutes back, per group</h2>
+          <p>A group of 25 used to take around 22 minutes to get through check-in. Now, everyone checks in simultaneously on their own phone. <strong>The whole group is through in under 2 minutes.</strong></p>
+          <p>That's roughly 20 minutes back — per large group booking. Multiply that across a busy weekend and it's a meaningful operational shift. Faster throughput, less pressure on staff, and guests arriving at their experience in a better headspace than they would after queuing at a kiosk for 20 minutes.</p>
+          <p>The kiosk is still there as a fallback. But for most guests, they don't need to touch it at all.</p>
+        </div>
+
+      </div>
+
+      <div class="sidebar">
+        <div class="stat reveal">
+          <div class="stat-n">Up to 50</div>
+          <div class="stat-l">Minutes saved per large group booking</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-n">&lt;2</div>
+          <div class="stat-l">Minutes for a group of 25 to complete check-in</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-n">100%</div>
+          <div class="stat-l">of the guest journey handled on their own device</div>
+        </div>
+        <div style="border:1px solid var(--rule);padding:20px;margin-top:12px;" class="reveal">
+          <p style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>Live in production</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.7;">Deployed across all Sandbox VR stores globally.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="next-project" href="faceit-community.html">
+    <span class="next-project-label">Next Project</span>
+    <div class="next-project-eyebrow">Product Design · UX Research · Gaming</div>
+    <h2 class="next-project-title">FACEIT Community Experiences</h2>
+    <p class="next-project-desc">Reimagining how 800k+ monthly players experienced community on one of the world's largest esports platforms.</p>
+    <div class="next-project-cta">
+      View project
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+</main>
+
+<footer>
+  <span class="footer-copy">© 2026 Robert Stuart — Vancouver, BC</span>
+  <ul class="footer-links">
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</footer>
+
+<script src="../shared.js"></script>
+</body>
+</html>

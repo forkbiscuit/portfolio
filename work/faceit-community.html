@@ -4,29 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FACEIT Community Experiences — Robert Stuart</title>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Jost:wght@300;400;500&family=Syne:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0d0d0b;--bg-2:#141412;--bg-3:#1c1c19;--ink:#f0efe8;--ink-2:#8a8a7e;--ink-3:    #7e7e76;--rule:#252520;--accent:#e8d5a3;--accent-2:#c4a96b}
-html{scroll-behavior:smooth}
-body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;cursor:none}
-.cursor{position:fixed;width:6px;height:6px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
-.cursor-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(232,213,163,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:56px;border-bottom:1px solid var(--rule);background:rgba(13,13,11,.92);backdrop-filter:blur(16px)}
-.nav-logo{text-decoration:none}
-.nav-logo img{height:28px;width:auto;display:block;opacity:.85;transition:opacity .2s}
-.nav-logo img:hover{opacity:1}
-.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--accent)}
-.nav-avail{display:flex;align-items:center;gap:7px;font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);letter-spacing:.06em}
-.avail-dot{width:6px;height:6px;border-radius:50%;background:#4caf50;animation:pulse 2.5s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.page-wrap{padding-top:56px}
-.page-hero{padding:100px 40px 72px;border-bottom:1px solid var(--rule)}
 .eyebrow{font-family:'Jost',sans-serif;font-size:13px;color:var(--accent-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
 .eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent-2)}
-.page-hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(36px,6vw,76px);font-weight:300;line-height:1.05;letter-spacing:-.03em;color:var(--ink);margin-bottom:28px;max-width:900px}
 .hero-desc{font-size:18px;color:var(--ink-2);max-width:560px;line-height:1.8;border-left:1px solid var(--rule);padding-left:20px}
 .meta-bar{display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2)}
 .meta-item{display:flex;flex-direction:column;gap:6px}
@@ -34,16 +15,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .meta-val{font-size:15px;color:var(--ink)}
 .section{padding:80px 40px;border-bottom:1px solid var(--rule)}
 .grid{display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start}
+.sidebar{position:sticky;top:80px}
 .phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-bottom:16px}
 h2{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px}
 h2:first-of-type{margin-top:0}
 h3{font-family:'Jost',sans-serif;font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);margin:32px 0 12px}
 p{font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px}
 p strong{color:var(--ink);font-weight:500}
-ul{list-style:none;margin-bottom:20px}
+ul{list-style:none;}
 ul li{font-size:16px;color:var(--ink-2);line-height:1.75;padding:10px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px}
 ul li::before{content:'—';color:var(--accent-2);flex-shrink:0}
 ul li strong{color:var(--ink);font-weight:500}
+ul.def-list li{display:flex;gap:24px;align-items:baseline}
+ul.def-list li::before{display:none}
+ul.def-list li strong{flex:0 0 auto;min-width:200px;font-weight:500;color:var(--ink)}
+ul.def-list li span{color:var(--ink-2)}
+.nav-links li{padding:0;border-bottom:none}
+.nav-links li::before{content:none}
+.footer-links li::before{display:none}
+.footer-links li{border:none;padding:0}
+.mobile-menu ul li{padding:0;border-bottom:none}
+.mobile-menu ul li::before{content:none}
 .pull{border-left:2px solid var(--accent-2);padding:20px 24px;margin:32px 0;background:var(--bg-2)}
 .pull p{font-family:'Unbounded',sans-serif;font-size:clamp(14px,1.8vw,20px);font-weight:300;color:var(--ink);line-height:1.4;letter-spacing:-.02em;margin:0}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0}
@@ -57,60 +49,15 @@ ul li strong{color:var(--ink);font-weight:500}
 .stat{border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px}
 .stat-n{font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:8px}
 .stat-l{font-family:'Jost',sans-serif;font-size:13px;color:var(--ink-2);letter-spacing:.06em}
-.sidebar{position:sticky;top:80px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--rule);cursor:none;color:var(--ink-2);background:transparent;transition:all .2s;margin-bottom:24px}
-.btn:hover{border-color:var(--ink-2);color:var(--ink)}
 .case-nav{display:flex;justify-content:space-between;align-items:center;padding:32px 40px}
 .case-nav a{font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .2s}
 .case-nav a:hover{color:var(--accent)}
-footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--rule)}
-.footer-copy{font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);letter-spacing:.06em}
-.footer-links{display:flex;gap:24px;list-style:none}
-.footer-links a{font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
-.footer-links a:hover{color:var(--accent)}
-.footer-links li::before{display:none}
-.footer-links li{border:none;padding:0}
-.nav-links li{padding:0;border-bottom:none}
-.nav-links li::before{content:none}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:none}
-.next-project{display:block;text-decoration:none;padding:80px 40px 100px;border-top:2px solid var(--accent-2);background:var(--bg-2);transition:background .35s;cursor:none}
-.next-project:hover{background:var(--bg-3)}
-.next-project-label{display:block;font-family:'Jost',sans-serif;font-size:12px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:56px}
-.next-project-eyebrow{font-family:'Jost',sans-serif;font-size:12px;color:var(--accent-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
-.next-project-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent-2);flex-shrink:0}
-.next-project-title{font-family:'Unbounded',sans-serif;font-size:clamp(36px,6vw,80px);font-weight:300;letter-spacing:-.03em;color:#ffffff;line-height:1.0;margin-bottom:24px;max-width:1000px}
-.next-project-desc{font-size:16px;color:var(--ink);max-width:600px;line-height:1.8;margin-bottom:40px}
-.next-project-cta{display:inline-flex;align-items:center;gap:12px;font-family:'Jost',sans-serif;font-size:12px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;transition:gap .25s,color .25s}
-.next-project-cta svg{stroke:currentColor;transition:transform .25s}
-.next-project:hover .next-project-cta{gap:22px;color:#ffffff}
-.next-project:hover .next-project-cta svg{transform:translateX(4px)}
-.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200}
-.nav-burger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;transform-origin:center}
-.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.nav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
-.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mobile-menu{display:none;position:fixed;inset:56px 0 0 0;background:var(--bg);z-index:99;flex-direction:column;justify-content:center;padding:48px 40px;opacity:0;pointer-events:none;transition:opacity .25s ease}
-.mobile-menu.open{opacity:1;pointer-events:all}
-.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:48px}
-.mobile-menu ul li{padding:0;border-bottom:none}
-.mobile-menu ul li::before{content:none}
-.mobile-menu ul a{font-family:'Unbounded',sans-serif;font-size:clamp(40px,14vw,64px);font-weight:300;color:var(--ink-2);text-decoration:none;letter-spacing:-.03em;line-height:1.15;display:block;transition:color .2s}
-.mobile-menu ul a:hover{color:var(--ink)}
-.mobile-menu-avail{display:flex;align-items:center;gap:8px;font-family:'Jost',sans-serif;font-size:13px;color:var(--ink-3);letter-spacing:.06em}
 @media(max-width:768px){
-  body{cursor:auto}.cursor,.cursor-ring{display:none}
-  nav{padding:0 20px}.page-hero{padding:80px 20px 56px}
-  .section{padding:56px 20px}.meta-bar{padding:24px 20px;gap:24px}
+  .section{padding:56px 20px}
+  .meta-bar{padding:24px 20px;gap:24px}
   .grid{grid-template-columns:1fr;gap:40px}
   .g2,.g3{grid-template-columns:1fr}
-  .next-project,footer{padding:48px 20px 64px}
-  footer{padding:24px 20px}
-  .case-nav,footer{padding:24px 20px}
   .sidebar{position:static}
-  .nav-links{display:none}
-  .nav-burger{display:flex}
-  .mobile-menu{display:flex}
 }
 </style>
 </head>
@@ -165,6 +112,7 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
 
         <div class="reveal">
           <span class="phase">Context</span>
+          <span class="phase">The Problem</span>
           <h2>The problem</h2>
           <p>Moving to the Community team in February 2022, I was tasked with changing how players experienced community on FACEIT. The target was ambitious: <strong>4X the number of matches played within communities</strong> — taking Monthly Active Players from 100k to 400k, split 300k Counter-Strike and 100k non-CS.</p>
           <p>At the time, communities were split into Hubs and Clans — two separate entities operating just differently enough to confuse new players entirely. To map the chaos, I created an illustrated guide for the wider design and PM team before we touched anything.</p>
@@ -174,6 +122,7 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
         <div class="divider"></div>
 
         <div class="reveal">
+          <span class="phase">Research</span>
           <span class="phase">Research</span>
           <h2>Understanding the space</h2>
           <p>Community touches almost every aspect of FACEIT — we couldn't wade in without thinking about UX implications at a larger scale than just changing one section. The research phase included user interviews, story mapping, internal and external user tests, requirement gathering from senior management, and conversations with stakeholders who'd been part of the original hubs and clans.</p>
@@ -193,15 +142,16 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
 
         <div class="reveal">
           <span class="phase">North Star</span>
+          <span class="phase">Scope</span>
           <h2>Centralisation</h2>
           <p>Out of the interviews a clear north star emerged — one unified community model instead of two confusing ones. From that, we defined six pillars the solution needed to deliver:</p>
-          <ul>
-            <li><strong>Discovery and joining</strong> — existing communities had an <strong>85% bounce rate</strong> driven by skill gating, region locks, and paid entry. Players needed to find and join communities with zero friction.</li>
-            <li><strong>Communication</strong> — feed-style posts, live chat, and async forums to match different conversation styles and paces.</li>
-            <li><strong>Play</strong> — lobby joining, remote queue, and cross-game support from CS to Clash Royale.</li>
-            <li><strong>Monetisation</strong> — prize pools, ladders, and admin tools all cost money. We needed to make running a community sustainable.</li>
-            <li><strong>Leagues and leaderboards</strong> — organisers were clear: leaderboards are the single biggest motivator for a playerbase. Non-negotiable.</li>
-            <li><strong>Stats</strong> — FACEIT players are statistic fiends. Modular, per-game, as deep as the user wants to go.</li>
+          <ul class="def-list">
+            <li><strong>Discovery and joining</strong><span>existing communities had an <strong>85% bounce rate</strong> driven by skill gating, region locks, and paid entry. Players needed to find and join communities with zero friction.</span></li>
+            <li><strong>Communication</strong><span>feed-style posts, live chat, and async forums to match different conversation styles and paces.</span></li>
+            <li><strong>Play</strong><span>lobby joining, remote queue, and cross-game support from CS to Clash Royale.</span></li>
+            <li><strong>Monetisation</strong><span>prize pools, ladders, and admin tools all cost money. We needed to make running a community sustainable.</span></li>
+            <li><strong>Leagues and leaderboards</strong><span>organisers were clear: leaderboards are the single biggest motivator for a playerbase. Non-negotiable.</span></li>
+            <li><strong>Stats</strong><span>FACEIT players are statistic fiends. Modular, per-game, as deep as the user wants to go.</span></li>
           </ul>
           <p>We pitched the centralisation concept to organisers in our network. The response was unanimous — they wanted in as soon as an MVP shipped.</p>
         </div>
@@ -210,6 +160,7 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
 
         <div class="reveal">
           <span class="phase">IA and Wireframes</span>
+          <span class="phase">Information Architecture</span>
           <h2>Story mapping and structure</h2>
           <p>Story mapping grounded the earliest wireframes in real user behaviour — themes, activities, and individual stories built from the organiser interviews. The solution had to be <strong>mobile-first</strong>: community is always-on, so a friend DMing you to play CS while you're on the sofa is exactly the entry point we were designing for. A three-panel layout gave us flexibility across screen sizes with clear navigation, main content, and a contextual third panel.</p>
           <img src="../assets/images/Frame 1115.png" alt="Story map" class="img-full">
@@ -250,6 +201,7 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
 
         <div class="reveal">
           <span class="phase">Hi-fi Design</span>
+          <span class="phase">Design</span>
           <h2>Going hi-fi</h2>
           <p>After stakeholder sign-off we moved to high-fidelity using FUSE — FACEIT's internal design system. The most significant structural shift was simplifying the left-hand sidebar: moving navigation to a global bottom bar freed the left rail for switching between communities, mirroring patterns players already knew from the FACEIT native app and indirect competitors. Those components are live in production today as the FUSE Panel component.</p>
           <p>One deliberate design decision: I reframed Events beyond tournaments. Communities aren't built on competition alone — they're built on people coming together and having fun. Introducing <strong>Social Gaming events</strong> let organisers create low-pressure sessions away from ELO anxiety.</p>
@@ -300,6 +252,7 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
 
         <div class="reveal">
           <span class="phase">Outcome</span>
+          <span class="phase">Impact</span>
           <h2>What this work unlocked</h2>
           <p>Four months of research-led design produced something that went beyond the brief. The three-panel layout became the <strong>Panel component in FUSE</strong> — now live in production across FACEIT's platform. The centralisation concept earned genuine organiser buy-in before a single line of code was written. And the 85% bounce rate problem had a clear, validated path to resolution.</p>
           <p>But the bigger outcome was less visible. When a senior designer on FACEIT's core Play XP team left unexpectedly, leadership didn't look outside. They looked at who had demonstrated the right combination of skills: deep platform knowledge, the ability to move fast on ambiguous problems, and the track record of bringing rigour to complex UX challenges.</p>
