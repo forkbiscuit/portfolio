@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sandbox VR Design System — Robert Stuart</title>
+<title>Sandbox VR — Robert Stuart</title>
 <link rel="stylesheet" href="../style.css">
 <style>
   .case-meta-bar { display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2); }
@@ -15,15 +15,20 @@
   .case-body-grid h2 { font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-0.02em;color:var(--ink);margin:40px 0 16px; }
   .case-body-grid h2:first-child { margin-top:0; }
   .case-body-grid p { font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px; }
-  .case-body-grid ul { list-style:none;margin-bottom:20px; }
-  .case-body-grid ul li { font-size:16px;color:var(--ink-2);line-height:1.75;padding:8px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px; }
-  .case-body-grid ul li::before { content:'—';color:var(--accent-2);flex-shrink:0; }
   .stat-block { border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px; }
   .stat-num { font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-0.03em;line-height:1;margin-bottom:8px; }
   .stat-label { font-family:'Jost',sans-serif;font-size:13px;color:var(--ink-2);letter-spacing:0.06em; }
   .img-full { width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:0.85;transition:opacity 0.2s; }
   .img-full:hover { opacity:1; }
   .img-caption { font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);letter-spacing:0.04em;margin-top:8px;margin-bottom:24px; }
+  .featured-link { display:flex;align-items:flex-start;flex-direction:column;gap:20px;padding:24px;border:1px solid var(--rule);background:var(--bg-2);text-decoration:none;transition:background 0.2s,border-color 0.2s;margin:24px 0; }
+  .featured-link:hover { background:var(--bg-3);border-color:var(--ink-3); }
+  .featured-link-meta { font-family:'Jost',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-2);margin-bottom:8px; }
+  .featured-link-title { font-family:'Unbounded',sans-serif;font-size:16px;font-weight:300;color:var(--ink);letter-spacing:-0.02em;margin-bottom:6px; }
+  .featured-link-desc { font-size:15px;color:var(--ink-2);line-height:1.7; }
+  .featured-link.placeholder { opacity:0.45;pointer-events:none; }
+  .placeholder-label { display:inline-block;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--rule);padding:3px 8px;margin-top:12px; }
+  .divider { height:1px;background:var(--rule);margin:48px 0; }
   @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .case-body-grid > div:last-child{position:static;} }
 </style>
 </head>
@@ -59,16 +64,16 @@
 <main id="main-content" class="page-wrap">
 
   <div class="page-hero">
-    <div class="page-hero-eyebrow">Design Systems · UI Foundations · Sandbox VR · 2023–Present</div>
-    <h1>Built from nothing.<br>Used by everyone.</h1>
-    <p class="page-hero-desc">How I went from a four-colour brand doc to a design system that runs across every Sandbox VR product.</p>
+    <div class="page-hero-eyebrow">Senior UX/UI Designer · Sandbox VR · 2023–Present</div>
+    <h1>One designer.<br>The whole product.</h1>
+    <p class="page-hero-desc">Since joining in July 2023, I've been the only designer across Sandbox VR's full product surface — booking, in-store, guest experience, and beyond. Design system built from scratch. Features shipped globally.</p>
   </div>
 
   <div class="case-meta-bar">
     <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Senior UX/UI Designer</span></div>
     <div class="case-meta-item"><span class="case-meta-label">Timeline</span><span class="case-meta-value">2023 – Present</span></div>
-    <div class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Design System, Primitives, Components</span></div>
-    <div class="case-meta-item"><span class="case-meta-label">Tools</span><span class="case-meta-value">Figma, Token Studio</span></div>
+    <div class="case-meta-item"><span class="case-meta-label">Scope</span><span class="case-meta-value">Design Systems, UX, Mobile Web, In-store</span></div>
+    <div class="case-meta-item"><span class="case-meta-label">Tools</span><span class="case-meta-value">Figma, Token Studio, Figma Make</span></div>
   </div>
 
   <div class="section-inner">
@@ -76,70 +81,58 @@
       <div>
 
         <div class="reveal">
-          <h2>Overview</h2>
-          <p>When I joined Sandbox VR in July 2023, the design foundation was basically a mood board. Four brand colours, some glamour shots of a concept store. That's it.</p>
-          <p>Developers were hardcoding everything. Every button, every input — built from scratch, every time, slightly differently. Nothing was reusable. Nothing was consistent. And as the only designer, I had no source of truth to point at. Neither did anyone else.</p>
-          <p>So I built one.</p>
+          <h2>The context</h2>
+          <p>Sandbox VR is location-based VR entertainment — guests book group experiences, come into the venue, suit up, and step into a shared virtual world. When I joined, the design foundation was basically a mood board. Four brand colours, some glamour shots of a concept store. Nothing systematic, nothing reusable.</p>
+          <p>As the sole designer, I've shipped across every part of the product — from the primitives that underpin every UI element, to guest-facing flows that run in venues worldwide.</p>
         </div>
 
-        <div class="reveal">
-          <h2>The problem</h2>
-          <p>The tricky bit: the system had to work across two very different environments. There's the digital product — booking flows, experience pages, account stuff. And then there's the physical in-store world — signage, hardware interfaces, in-venue UX. Both needed to feel like the same thing.</p>
-          <p>The mess I was working with:</p>
-          <ul>
-            <li>Devs rebuilding UI from scratch on every ticket</li>
-            <li>Type, colour, and spacing all over the place</li>
-            <li>No handoff process — decisions lived in people's heads</li>
-            <li>Every new project or IP collab meant starting from zero</li>
-          </ul>
-        </div>
+        <div class="divider"></div>
 
         <div class="reveal">
-          <h2>Start with the foundations</h2>
-          <img src="../assets/images/DesignSystem-1.png" alt="Figma variables panel showing semantic colour tokens and typography scale across light and dark modes" class="img-full">
-          <p class="img-caption">Colour tokens and typography scale across light and dark modes</p>
-          <p>I started with primitives — the raw values everything else inherits from. The system runs across two token levels.</p>
-          <p>At the primitive level, tokens use code-style naming that maps to actual values. brand.trigger.full is blue/700. brand.darkGrey.alt/900 is your darkest surface. These are the atoms.</p>
-          <p>The semantic level sits above that and makes things human-readable — color/surface/base, color/text/high, color/icon/full. Designers and devs talk in semantics. The primitives sit underneath doing the work quietly. It means if a value changes — new theme, dark mode update, rebrand — you change it once, at the primitive level, and it flows through everything.</p>
-          <p>Typography got a full overhaul too. When I joined, type was a mess — bold here, italic there, no logic. Replaced it with a proper scale, H0 down through body and utility styles.</p>
-        </div>
-
-        <div class="reveal">
-          <h2>Iconography</h2>
-          <img src="../assets/images/DesignSystem-5.png" alt="Custom Sandbox VR prop icons — headset, pistol, vest, rifle, tracker and wand — organised by component naming convention" class="img-full">
-          <p class="img-caption">Custom prop iconography — headset, pistol, vest, rifle, tracker, wand</p>
-          <p>I built a set of custom icons for Sandbox VR's physical props — headsets, vests, trackers, wands — then used Google Material to backfill the utility stuff. Arrows, chevrons, add/remove, that kind of thing. Custom where it matters, sourced where it doesn't.</p>
-        </div>
-
-        <div class="reveal">
-          <h2>Components</h2>
-          <img src="../assets/images/DesignSystem-2.png" alt="Figma canvas showing the full button component library — all states, sizes, and colour variants" class="img-full">
+          <h2>Design System</h2>
+          <img src="../assets/images/DesignSystem-2.png" alt="Sandbox VR design system — full button component library" class="img-full">
           <p class="img-caption">Full button component library — all states, sizes, and colour variants</p>
-          <p>Once the foundations were solid, I tackled the high-traffic stuff first. Buttons, text fields, nav, footers. All designed with accessibility in mind, built to work with how modern search actually surfaces content.</p>
-          <p>The goal was never a reference doc people dread opening. It was a lego kit — grab what you need, build, ship.</p>
-          <img src="../assets/images/DesignSystem-4.png" alt="Text input components showing all states across light and dark modes, including RTL Arabic variants for global markets" class="img-full">
-          <p class="img-caption">Text inputs across all states — including RTL Arabic variants for global markets</p>
-          <p>The system was built for global use from the start. Text inputs include full RTL Arabic variants. Not an afterthought — baked in from the beginning.</p>
+          <p>Built the full Sandbox VR design system from a blank Figma file — primitive tokens, semantic tokens, iconography, and a component library that spans the booking funnel, in-store hardware, and admin tooling. 130+ product tickets shipped using system components. When Netflix House launched, devs pulled the admin panel straight from the system and shipped with almost no design input.</p>
+          <a href="sandbox-design-system.html" class="featured-link">
+            <div>
+              <div class="featured-link-meta">Design Systems · Figma · Token Studio</div>
+              <div class="featured-link-title">Built from nothing. Used by everyone.</div>
+              <div class="featured-link-desc">130+ tickets shipped · 105 semantic tokens · 3 Figma library files</div>
+            </div>
+            <span class="btn btn-primary">View Case Study</span>
+          </a>
         </div>
 
-        <div class="reveal">
-          <h2>System in context</h2>
-          <img src="../assets/images/DesignSystem-3.png" alt="Figma canvas showing the stepper component alongside a real booking summary UI with live pricing data" class="img-full">
-          <p class="img-caption">Stepper component alongside a real booking summary — the system working in the wild</p>
-          <p>This is the stepper component sitting next to a real booking summary — actual pricing, real product names, production layout. Not a demo. The system working in the wild.</p>
-        </div>
+        <div class="divider"></div>
 
         <div class="reveal">
-          <h2>How it's maintained</h2>
-          <p>I didn't build it and call it done. That's how systems go stale.</p>
-          <p>Primitives are pretty much set-and-forget — the bedrock doesn't shift much. But the component and iconography files are kept live, with weekly dev syncs to make sure both sides stay in sync when something changes.</p>
-          <p>Design trends get considered, not chased. The system doesn't bend to every aesthetic shift — but it does respond when something genuinely changes how users expect things to work.</p>
+          <h2>Mobile Check-in</h2>
+          <img src="../assets/images/CheckIn-2.png" alt="Mobile check-in screen — Tell us who is checking in" class="img-full">
+          <p class="img-caption">The first screen — one question that branches the entire flow</p>
+          <p>Every guest used to check in on a shared iPad kiosk. A group of 25 took roughly 22 minutes. We moved the whole thing to guests' own phones — a mobile web app they access by scanning a QR code. 5 steps from unchecked to fully ready. Groups of 25 now clear check-in in under 2 minutes.</p>
+          <a href="sandbox-checkin.html" class="featured-link">
+            <div>
+              <div class="featured-link-meta">UX Design · Mobile Web · 2024</div>
+              <div class="featured-link-title">Killing the queue.</div>
+              <div class="featured-link-desc">~20 minutes saved per large group · Live across the global venue network</div>
+            </div>
+            <span class="btn btn-primary">View Case Study</span>
+          </a>
         </div>
 
+        <div class="divider"></div>
+
         <div class="reveal">
-          <h2>The proof</h2>
-          <p>When Netflix House launched, an admin panel needed to go live fast. Devs built it with almost no design input — pulled straight from the system, implemented it, shipped it.</p>
-          <p>That's the whole point. Build the tool well enough that it works without you in the room.</p>
+          <h2>Silica</h2>
+          <p>Details coming soon.</p>
+          <div class="featured-link placeholder">
+            <div>
+              <div class="featured-link-meta">Coming Soon</div>
+              <div class="featured-link-title">Silica</div>
+              <div class="featured-link-desc">Case study in progress.</div>
+            </div>
+            <span class="placeholder-label">Coming soon</span>
+          </div>
         </div>
 
       </div>
@@ -147,15 +140,15 @@
       <div>
         <div class="stat-block reveal">
           <div class="stat-num">130+</div>
-          <div class="stat-label">Product tickets shipped using system components</div>
+          <div class="stat-label">Product tickets shipped using design system components</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="stat-num">~20</div>
+          <div class="stat-label">Minutes saved per large group booking at check-in</div>
         </div>
         <div class="stat-block reveal">
           <div class="stat-num">105</div>
           <div class="stat-label">Semantic tokens across light and dark modes</div>
-        </div>
-        <div class="stat-block reveal">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Figma library files — Primitives, Iconography, Components</div>
         </div>
         <div class="stat-block reveal">
           <div class="stat-num">1</div>
