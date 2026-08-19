@@ -16,6 +16,9 @@
 
 html { scroll-behavior: smooth; }
 
+a { color: var(--accent); }
+a:hover { color: #ffffff; }
+
 body {
   font-family: 'Syne', sans-serif;
   background: var(--bg);
