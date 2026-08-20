@@ -24,6 +24,9 @@
   .img-full { width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:0.85;transition:opacity 0.2s; }
   .img-full:hover { opacity:1; }
   .img-caption { font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);letter-spacing:0.04em;margin-top:8px;margin-bottom:24px; }
+  .phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-top:56px;margin-bottom:8px}
+  .reveal:first-child .phase{margin-top:0}
+  .phase+h2{margin-top:6px}
   @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .case-body-grid > div:last-child{position:static;} }
 </style>
 </head>
@@ -60,7 +63,7 @@
 
   <div class="page-hero reveal">
     <div class="page-hero-eyebrow">Design Systems · UI Foundations · Sandbox VR · 2023–Present</div>
-    <h1>Built from nothing.<br>Used by everyone.</h1>
+    <h1>The Sandbox VR Design System</h1>
     <p class="page-hero-desc">How I went from a four-colour brand doc to a design system that runs across every Sandbox VR product.</p>
   </div>
 
@@ -76,77 +79,84 @@
       <div>
 
         <div class="reveal">
-          <h2>Overview</h2>
-          <p>When I joined Sandbox VR in July 2023, the design foundation was basically a mood board. Four brand colours, some glamour shots of a concept store. That's it.</p>
-          <p>Developers were hardcoding everything. Every button, every input — built from scratch, every time, slightly differently. Nothing was reusable. Nothing was consistent. And as the only designer, I had no source of truth to point at. Neither did anyone else.</p>
-          <p>So I built one.</p>
+          <span class="phase">Overview</span>
+          <h2>Context</h2>
+          <p>When I joined Sandbox VR in July 2023, the design foundation was a few screenshots from a flashy presentation they recieved as part of their initial branding. Four brand hex colours, some glamour shots of a concept store and a few photos of people posing with foam VR goggles on. That was the starting line.</p>
+          <p>Developers were hardcoding everything. Every button, every text input, all built from scratch, every single time, often slightly differently as the tech debt mounted over years of not having a single source of truth. Very little was reusable. Nothing was consistent.</p>
         </div>
 
         <div class="reveal">
+          <span class="phase">The Problem</span>
           <h2>The problem</h2>
-          <p>The tricky bit: the system had to work across two very different environments. There's the digital product — booking flows, experience pages, account stuff. And then there's the physical in-store world — signage, hardware interfaces, in-venue UX. Both needed to feel like the same thing.</p>
-          <p>The mess I was working with:</p>
+          <p>Over the years of "scrappy startup" building, the tech debt from inconsistent was huge. Often the approach was a "sack it off, just make it again" instead of trying to pick apart what was already there. The UI system had to work across two very different environments. There's the digital product: booking flows, experience pages, marketing campaign pages, account stuff, and then there's the physical in-store world — signage, hardware interfaces, in-venue UX. Both needed to feel like the same thing and were, when I joined, hugely disjointed</p>
+          <p>The star</p>
           <ul>
             <li>Devs rebuilding UI from scratch on every ticket</li>
             <li>Type, colour, and spacing all over the place</li>
-            <li>No handoff process — decisions lived in people's heads</li>
-            <li>Every new project or IP collab meant starting from zero</li>
+            <li>No handoff process — visual decisions lived in people's heads and were vibes-based</li>
+            <li>Each new project or partnership with companies such as Netflix meant starting from the beginning every time</li>
           </ul>
         </div>
 
         <div class="reveal">
+          <span class="phase">Foundations</span>
           <h2>Start with the foundations</h2>
           <img src="../assets/images/DesignSystem-1.png" alt="Figma variables panel showing semantic colour tokens and typography scale across light and dark modes" class="img-full">
           <p class="img-caption">Colour tokens and typography scale across light and dark modes</p>
-          <p>I started with primitives — the raw values everything else inherits from. The system runs across two token levels.</p>
-          <p>At the primitive level, tokens use code-style naming that maps to actual values. brand.trigger.full is blue/700. brand.darkGrey.alt/900 is your darkest surface. These are the atoms.</p>
-          <p>The semantic level sits above that and makes things human-readable — color/surface/base, color/text/high, color/icon/full. Designers and devs talk in semantics. The primitives sit underneath doing the work quietly. It means if a value changes — new theme, dark mode update, rebrand — you change it once, at the primitive level, and it flows through everything.</p>
-          <p>Typography got a full overhaul too. When I joined, type was a mess — bold here, italic there, no logic. Replaced it with a proper scale, H0 down through body and utility styles.</p>
+          <p>I started with primitives as I wanted to build this atomically. Enter raw values on an atomic level, then point semantic tokens towards these raw values. </p>
+          <p>At the primitive level, tokens used code-style naming that would slot better into a "set it and forget it", i.e. blue/700, darkGrey-alt/50 etc. </p>
+          <p>The semantic level that sat above that and makes things human-readable — color/surface/base, color/text/high, color/icon/full referenced back to these initial values. Designers and devs talked in semantics, not the other way round. This second layer meant that if a value changes — new theme, dark mode update, everyone discovers that the colour blue is actually horrible — you change it once, at the primitive level, and it cascaded through everything.</p>
+          <p>Typography got a full overhaul too. When I joined, type was a mess — forced bold here, italic there, very little logic as to what it actually should be. Replaced it with a proper scale, H1 down through titles, subheads, body and utility styles.</p>
         </div>
 
         <div class="reveal">
+          <span class="phase">Iconography</span>
           <h2>Iconography</h2>
           <img src="../assets/images/DesignSystem-5.png" alt="Custom Sandbox VR prop icons — headset, pistol, vest, rifle, tracker and wand — organised by component naming convention" class="img-full">
           <p class="img-caption">Custom prop iconography — headset, pistol, vest, rifle, tracker, wand</p>
-          <p>I built a set of custom icons for Sandbox VR's physical props — headsets, vests, trackers, wands — then used Google Material to backfill the utility stuff. Arrows, chevrons, add/remove, that kind of thing. Custom where it matters, sourced where it doesn't.</p>
+          <p>I drew a set of custom icons for Sandbox VR's physical props — headsets, vests, trackers, wands — then used Google Material to backfill the utility stuff. Arrows, chevrons, add/remove, that kind of thing. Custom where it matters, sourced where it didn't as much. </p>
+          <p>The main reason behind this was an easy switch out to a library of icons that were well designed, consistently updated and easy to implement.</p>
         </div>
 
         <div class="reveal">
+          <span class="phase">Components</span>
           <h2>Components</h2>
           <img src="../assets/images/DesignSystem-2.png" alt="Figma canvas showing the full button component library — all states, sizes, and colour variants" class="img-full">
           <p class="img-caption">Full button component library — all states, sizes, and colour variants</p>
-          <p>Once the foundations were solid, I tackled the high-traffic stuff first. Buttons, text fields, nav, footers. All designed with accessibility in mind, built to work with how modern search actually surfaces content.</p>
-          <p>The goal was never a reference doc people dread opening. It was a lego kit — grab what you need, build, ship.</p>
+          <p>Once the foundations were solid, I tackled the high-traffic stuff first. Buttons, text fields, nav, footers. All designed with at least AA WCAG accessibility in mind.</p>
+          <p>The goal was building a Lego kit — grab what you need, build, ship. If it didn't exist and engineers needed it, we collaborated to make sure that whatever we brought into the design system was consistent with everything else and fit for purpose.</p>
           <img src="../assets/images/DesignSystem-4.png" alt="Text input components showing all states across light and dark modes, including RTL Arabic variants for global markets" class="img-full">
           <p class="img-caption">Text inputs across all states — including RTL Arabic variants for global markets</p>
-          <p>The system was built for global use from the start. Text inputs include full RTL Arabic variants. Not an afterthought — baked in from the beginning.</p>
+          <p>The system was built for global use from the start. Text inputs also included full RTL Arabic support for stores opening in the Middle East. Not built as an afterthought but baked in from the beginning.</p>
         </div>
 
         <div class="reveal">
-          <h2>System in context</h2>
           <img src="../assets/images/DesignSystem-3.png" alt="Figma canvas showing the stepper component alongside a real booking summary UI with live pricing data" class="img-full">
-          <p class="img-caption">Stepper component alongside a real booking summary — the system working in the wild</p>
-          <p>This is the stepper component sitting next to a real booking summary — actual pricing, real product names, production layout. Not a demo. The system working in the wild.</p>
+          <p class="img-caption">An example component – Stepper</p>
         </div>
 
         <div class="reveal">
+          <span class="phase">Maintenance</span>
           <h2>How it's maintained</h2>
-          <p>I didn't build it and call it done. That's how systems go stale.</p>
-          <p>Primitives are pretty much set-and-forget — the bedrock doesn't shift much. But the component and iconography files are kept live, with weekly dev syncs to make sure both sides stay in sync when something changes.</p>
-          <p>Design trends get considered, not chased. The system doesn't bend to every aesthetic shift — but it does respond when something genuinely changes how users expect things to work.</p>
+          <p>I didn't build it and call it done. This was a living, breathing document that needed nudging and tweaking as time went on.</p>
+          <p>Primitives were pretty much set-and-forget — the bedrock didn't shift all that much. The component and iconography libraries however were kept live, with weekly dev syncs to make sure both sides stay in step together when something changes.</p>
+          <p>Design trends were considered, not always chased. The point of the system wasn't to bend to every aesthetic shift — but it does respond when something genuinely changes in how users expect things to work.</p>
         </div>
 
         <div class="reveal">
+          <span class="phase">Impact</span>
           <h2>The proof</h2>
-          <p>When Netflix House launched, an admin panel needed to go live fast. Devs built it with almost no design input — pulled straight from the system, implemented it, shipped it.</p>
-          <p>That's the whole point. Build the tool well enough that it works without you in the room.</p>
+          <p>150+ product team tickets were shipped with design system components alongside countless dev and marketing tickets. Across the business it was mass-adopted, both into online and in-store touchpoints by engineering, marketing and store teams.</p>
+          <p>When we launched our collaboration with <strong>Netflix House</strong>, an admin panel needed to be span up to manage the sessions in the Philadelphia location and go live with the classic start-up deadline of 'immediately'. </p>
+          <p>I'm incredibly proud of the fact that engineers were able to pull straight from the system, using pre-established patterns and components to build, implement and ship it incredibly quickly with little input needed from my side apart from a <i>"Looks good to me."</i></p>
+          <p>That's the whole point: build the tool well enough that it works without you in the room.</p>
         </div>
 
       </div>
 
       <div>
         <div class="stat-block reveal">
-          <div class="stat-num">130+</div>
+          <div class="stat-num">150+</div>
           <div class="stat-label">Product tickets shipped using system components</div>
         </div>
         <div class="stat-block reveal">
@@ -156,10 +166,6 @@
         <div class="stat-block reveal">
           <div class="stat-num">3</div>
           <div class="stat-label">Figma library files — Primitives, Iconography, Components</div>
-        </div>
-        <div class="stat-block reveal">
-          <div class="stat-num">1</div>
-          <div class="stat-label">Designer running the entire product surface, digital and physical</div>
         </div>
       </div>
     </div>
