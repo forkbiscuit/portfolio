@@ -88,7 +88,7 @@ ul li strong{color:var(--ink);font-weight:500}
   <div class="page-hero reveal">
     <div class="eyebrow">Product Design · Internal Tooling · Sandbox VR · 2023–Present</div>
     <h1>The OS that runs Sandbox VR.</h1>
-    <p class="hero-desc">Silica is the modular staff-facing platform I designed that now runs every Sandbox VR store in the world.</p>
+    <p class="hero-desc">Silica is the modular staff-facing platform that now runs every Sandbox VR store in the world.</p>
   </div>
 
   <div class="meta-bar">
@@ -107,7 +107,7 @@ ul li strong{color:var(--ink);font-weight:500}
           <span class="phase">Overview</span>
           <h2>Before Silica</h2>
           <p>Before Silica, staff ran sessions on something called Sandbox OS. It was janky, crash-prone, and constantly made people jump between third-party apps just to handle one booking. Things fell through the cracks. The quality of a guest's experience depended too much on who happened to be working that day.</p>
-          <p>I was handed a contractor's rough first stab at a replacement — no IA, no design system, loosely held together. My job was to turn it into something real without blowing up the dev progress that already existed.</p>
+          <p>I was handed a contractor's rough first stab at a replacement. There was no heirarchy, no design system, everything was loosely held together. My job was to turn it into something launchable without blowing up the dev progress that already existed.</p>
         </div>
 
         <div class="divider"></div>
@@ -115,7 +115,7 @@ ul li strong{color:var(--ink);font-weight:500}
         <div class="reveal">
           <span class="phase">How It Started</span>
           <h2>San Francisco, first principles</h2>
-          <p>I flew out to San Francisco early in the project with my boss and the Head of Product to figure out the right approach. The thing we agreed on pretty quickly: we didn't want to build a monolithic super-app. One giant thing that does everything is hard to update, hard to maintain, and when something breaks it tends to break everything.</p>
+          <p>I flew out to San Francisco early in the project with my boss and the Head of Product to figure out the right approach. Over the course of a few days we brainstormed and pretty quickly agreed that we didn't want to build a monolithic super-app. One giant thing that does everything is hard to update, hard to maintain, and when something breaks it tended to break everything.</p>
           <p>Instead we went modular. A suite of micro-apps — siloed, independently updatable, each doing one thing well. That decision ended up shaping everything that followed.</p>
           <p>My boss left early into the project. From that point it was me and Woody Kwong, an excellent PM, running point on the whole thing.</p>
         </div>
@@ -127,34 +127,35 @@ ul li strong{color:var(--ink);font-weight:500}
           <h2>The navigation layer</h2>
           <img src="../assets/images/Silica-1.png" alt="Silica navigation bar component showing all app icon active states and system status error variants" class="img-full">
           <p class="caption">Nav component sheet — all app icon states and the three system status variants</p>
-          <p>GEGs use iPad minis. The nav bar sits at the top — app icons for each micro-app, always visible, always one tap away. Switch between apps without losing your place in whatever you were doing.</p>
-          <p>The nav also shows system status. All clear, one issue, multiple issues. It's always there, never intrusive. You only really notice it when something's wrong — which is exactly the point.</p>
+          <p>Staff at Sandbox VR use iPad minis to manage sessions. The nav bar sat at the top — app icons for each micro-app, always visible, always one tap away. Switch between apps without losing your place in whatever you were doing.</p>
+          <p>The nav also showed system status. All clear, one issue, multiple issues. It's always there, never intrusive. You only really notice it when something's wrong — which is exactly the point.</p>
+          <p>Staff sitting and staring at the status screens was identified as a key issue for store operations teams – many weren't familiar with what "Headset Latency" or the multitude of different stats meant, yet would be terrified seeing a graph spike or something turn orange or red for half a second. Our goal was to take them off these pages and only let them know when there really <i>was</i> an issue. </p>
         </div>
 
         <div class="divider"></div>
 
         <div class="reveal">
           <span class="phase">Session App</span>
-          <h2>The main event</h2>
+          <h2>The main focus</h2>
           <div class="g2">
             <img src="../assets/images/Silica-2.png" alt="Silica session app home screen showing all holodecks and their current status across a live store">
             <img src="../assets/images/Silica-2.5.png" alt="Silica create session flow showing holodeck selection with live session states and queue management">
           </div>
-          <p>The session app is the main event. It gives GEGs a live overview of the whole store — every Holodeck, every session, what's running, what's vacant, what's flagged.</p>
+          <p>The session app is the main focus of Silica. It gave staff a live overview of the whole store — every Holodeck, every session, what's running, what's vacant, what's flagged, what's broken and what's not</p>
           <p>From there it walks them through every step:</p>
           <ul>
             <li>Assign guests to a Holodeck</li>
-            <li>Confirm the experience, difficulty, any specific settings (Vertigo mode for Squid Game, for example)</li>
+            <li>Confirm the experience, difficulty, any specific settings (Vertigo mode for Squid Game, or Hardcore for the Deadwood games, for example)</li>
             <li>Confirm player names, take guest photos for their personalised trailers</li>
-            <li>Loadout selection — guests pick weapons where the experience supports it</li>
+            <li>Loadout selection — guests pick weapons or characters where the experience supports it</li>
             <li>Check all hardware before anyone steps into the Holodeck</li>
           </ul>
           <img src="../assets/images/Silica-3.png" alt="Silica device check screen showing all player hardware confirmed ready before session launch" class="img-full">
           <p class="caption">Device check — every piece of hardware confirmed in one view before launch</p>
-          <p>The device check screen is one I'm particularly happy with. Every piece of hardware confirmed in one view — Players, Server, Video — with individual player devices shown by name and team colour underneath. Nothing starts until everything's green.</p>
+          <p>The device check screen is a key screen during check-in. Every piece of hardware confirmed in one view — Players, Server, Video — with individual player devices shown by name and team colour underneath. Easily able to monitor, check for when it's ready and then go.</p>
           <img src="../assets/images/Silica-5.png" alt="Silica player swap screen showing options to reassign players across session slots" class="img-full">
           <p class="caption">Player swap — searchable, sortable, handles mid-flow edge cases</p>
-          <p>Edge cases matter too. Need to swap a player mid-flow? The system shows you who's in session, who else is checked in, and players from other bookings — all searchable, sortable in a couple of taps.</p>
+          <p>Edge cases matter too. Need to swap a player mid-flow if they're not feeling it anymore, or want to move around a big group with multiple rooms? The system shows you who's in session, who else is checked in, and players from other bookings — all searchable, sortable in a couple of taps.</p>
         </div>
 
         <div class="divider"></div>
@@ -162,9 +163,9 @@ ul li strong{color:var(--ink);font-weight:500}
         <div class="reveal">
           <span class="phase">Design Challenge</span>
           <h2>Designing for someone who doesn't care about the tech</h2>
-          <p>This was one of the more interesting design problems on the project. Silica needs to flag hardware issues — disconnected props, lag spikes, network problems — to staff who aren't technical. These aren't people who took the job because they love troubleshooting. They took it because it paid better than the place next door.</p>
+          <p>This was one of the more interesting design problems on the project. Silica needs to flag hardware issues — disconnected props, lag spikes, network problems — to staff who aren't technical, nor care to be. These aren't necessarily people who took the job because they love troubleshooting. </p>
           <div class="pull"><p>Traffic lights. Green is fine. Amber, keep an eye on it. Red needs dealing with.</p></div>
-          <p>If it needs escalating beyond that, a deep link fires the full error detail straight to a Slack channel where the T1 support team can pick it up. The GEG doesn't need to know what's wrong. They just need to know who to hand it to.</p>
+          <p>If it needs escalating beyond that, a deep link drops the full error detail straight to a Slack channel where the T1 support team can pick it up. The member of staff doesn't need to know what's wrong, they just need to be able to pass it to someone who can help.</p>
         </div>
 
         <div class="divider"></div>
@@ -174,8 +175,8 @@ ul li strong{color:var(--ink);font-weight:500}
           <h2>The post-experience moment</h2>
           <img src="../assets/images/Silica-4.png" alt="Silica video app showing completed trailer and selfie renders with cast and share controls" class="img-full">
           <p class="caption">Video app — trailers, highlights, cast and share, all handled in-venue</p>
-          <p>Once the session wraps, guests head to the post-experience area. The video app takes over.</p>
-          <p>GEGs cast the personalised trailers and highlight reels to the TV, then share them — airdrop, email, text, QR code. If a render's failed, they can restart it on the spot without needing anyone technical in the room. Relevant upselling gets surfaced here too, at the right moment rather than shoved in somewhere awkward.</p>
+          <p>Once the session wraps, guests head to the post-experience area. Session app then kicks them over to the video app takes over.</p>
+          <p>Staff then cast the personalised trailers and highlight reels to the TV, then share them — airdrop, email, text, QR code. If a render's failed, they can restart it on the spot without needing anyone technical in the room. Relevant upselling gets surfaced here too, at the right moment rather than shoved in somewhere awkward.</p>
         </div>
 
         <div class="divider"></div>
@@ -183,17 +184,16 @@ ul li strong{color:var(--ink);font-weight:500}
         <div class="reveal">
           <span class="phase">Impact</span>
           <h2>Where it is now</h2>
-          <p>We launched with two apps. Since then it's grown into a full fleet — prop management, check-in, booking management, fire alarms, and more. All on the same modular foundation.</p>
+          <p>We launched with two apps. Since then it's grown into a full software fleet — prop management, check-in, booking management, fire alarms, and more. All on the same modular foundation.</p>
           <p>Third-party integrations are gone. Updates roll out across the whole estate without touching unrelated parts of the system. What started as a contractor's rough first pass is now the thing that runs every Sandbox VR store in the world.</p>
-          <p>Not bad.</p>
         </div>
 
       </div>
 
       <div class="sidebar">
         <div class="stat reveal">
-          <div class="stat-n">2→∞</div>
-          <div class="stat-l">MVP apps grown into a full store operations fleet</div>
+          <div class="stat-n">9</div>
+          <div class="stat-l">Apps build and shipped as of August 2026</div>
         </div>
         <div class="stat reveal">
           <div class="stat-n">100%</div>
