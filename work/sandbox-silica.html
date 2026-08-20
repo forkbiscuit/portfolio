@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silica — Robert Stuart</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.eyebrow{font-family:'Jost',sans-serif;font-size:13px;color:var(--accent-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent-2)}
+.hero-desc{font-size:18px;color:var(--ink-2);max-width:560px;line-height:1.8;border-left:1px solid var(--rule);padding-left:20px}
+.meta-bar{display:flex;gap:40px;flex-wrap:wrap;padding:32px 40px;border-bottom:1px solid var(--rule);background:var(--bg-2)}
+.meta-item{display:flex;flex-direction:column;gap:6px}
+.meta-label{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.meta-val{font-size:15px;color:var(--ink)}
+.section{padding:80px 40px;border-bottom:1px solid var(--rule);max-width:1800px;margin:0 auto}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start}
+.sidebar{position:sticky;top:80px}
+.phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-top:56px;margin-bottom:8px}
+.reveal:first-child .phase,.section:first-of-type .phase:first-child{margin-top:0}
+.phase+h2{margin-top:6px}
+h2{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px}
+h2:first-of-type{margin-top:0}
+p{font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px}
+p strong{color:var(--ink);font-weight:500}
+ul{list-style:none;margin-bottom:20px}
+ul li{font-size:16px;color:var(--ink-2);line-height:1.75;padding:10px 0;border-bottom:1px solid var(--rule);display:flex;gap:12px}
+ul li::before{content:'—';color:var(--accent-2);flex-shrink:0}
+ul li strong{color:var(--ink);font-weight:500}
+.nav-links li{padding:0;border-bottom:none}
+.nav-links li::before{content:none}
+.footer-links li::before{display:none}
+.footer-links li{border:none;padding:0}
+.mobile-menu ul li{padding:0;border-bottom:none}
+.mobile-menu ul li::before{content:none}
+.pull{border-left:2px solid var(--accent-2);padding:20px 24px;margin:32px 0;background:var(--bg-2)}
+.pull p{font-family:'Unbounded',sans-serif;font-size:clamp(14px,1.8vw,20px);font-weight:300;color:var(--ink);line-height:1.4;letter-spacing:-.02em;margin:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0}
+.g2 img{width:100%;display:block;border:1px solid var(--rule);opacity:.85;transition:opacity .2s}
+.g2 img:hover{opacity:1}
+.img-full{width:100%;display:block;border:1px solid var(--rule);margin:24px 0;opacity:.85;transition:opacity .2s}
+.img-full:hover{opacity:1}
+.caption{font-family:'Jost',sans-serif;font-size:12px;color:var(--ink-3);letter-spacing:.04em;margin-top:-16px;margin-bottom:24px}
+.divider{height:1px;background:var(--rule);margin:48px 0}
+.stat{border:1px solid var(--rule);background:var(--bg-2);padding:24px;margin-bottom:12px}
+.stat-n{font-family:'Unbounded',sans-serif;font-size:44px;font-weight:300;color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:8px}
+.stat-l{font-family:'Jost',sans-serif;font-size:13px;color:var(--ink-2);letter-spacing:.06em}
+@media(max-width:768px){
+  .section{padding:56px 20px}
+  .meta-bar{padding:24px 20px;gap:24px}
+  .grid{grid-template-columns:1fr;gap:40px}
+  .g2{grid-template-columns:1fr}
+  .sidebar{position:static}
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav aria-label="Main navigation">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/R-Logo-inverted.png" alt="Robert Stuart">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#work" class="active">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+    <li><span class="nav-avail"><span class="avail-dot"></span>Available</span></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-avail"><span class="avail-dot"></span>Available</div>
+</div>
+
+<main id="main-content" class="page-wrap">
+
+  <div class="page-hero reveal">
+    <div class="eyebrow">Product Design · Internal Tooling · Sandbox VR · 2023–Present</div>
+    <h1>The OS that runs Sandbox VR.</h1>
+    <p class="hero-desc">Silica is the modular staff-facing platform I designed that now runs every Sandbox VR store in the world.</p>
+  </div>
+
+  <div class="meta-bar">
+    <div class="meta-item"><span class="meta-label">Role</span><span class="meta-val">Senior UX/UI Designer</span></div>
+    <div class="meta-item"><span class="meta-label">Company</span><span class="meta-val">Sandbox VR</span></div>
+    <div class="meta-item"><span class="meta-label">Timeline</span><span class="meta-val">2023 – Present</span></div>
+    <div class="meta-item"><span class="meta-label">Scope</span><span class="meta-val">Product Design, Internal Tooling</span></div>
+    <div class="meta-item"><span class="meta-label">Tools</span><span class="meta-val">Figma</span></div>
+  </div>
+
+  <div class="section">
+    <div class="grid">
+      <div>
+
+        <div class="reveal">
+          <span class="phase">Overview</span>
+          <h2>Before Silica</h2>
+          <p>Before Silica, staff ran sessions on something called Sandbox OS. It was janky, crash-prone, and constantly made people jump between third-party apps just to handle one booking. Things fell through the cracks. The quality of a guest's experience depended too much on who happened to be working that day.</p>
+          <p>I was handed a contractor's rough first stab at a replacement — no IA, no design system, loosely held together. My job was to turn it into something real without blowing up the dev progress that already existed.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">How It Started</span>
+          <h2>San Francisco, first principles</h2>
+          <p>I flew out to San Francisco early in the project with my boss and the Head of Product to figure out the right approach. The thing we agreed on pretty quickly: we didn't want to build a monolithic super-app. One giant thing that does everything is hard to update, hard to maintain, and when something breaks it tends to break everything.</p>
+          <p>Instead we went modular. A suite of micro-apps — siloed, independently updatable, each doing one thing well. That decision ended up shaping everything that followed.</p>
+          <p>My boss left early into the project. From that point it was me and Woody Kwong, an excellent PM, running point on the whole thing.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">Architecture</span>
+          <h2>The navigation layer</h2>
+          <img src="../assets/images/Silica-1.png" alt="Silica navigation bar component showing all app icon active states and system status error variants" class="img-full">
+          <p class="caption">Nav component sheet — all app icon states and the three system status variants</p>
+          <p>GEGs use iPad minis. The nav bar sits at the top — app icons for each micro-app, always visible, always one tap away. Switch between apps without losing your place in whatever you were doing.</p>
+          <p>The nav also shows system status. All clear, one issue, multiple issues. It's always there, never intrusive. You only really notice it when something's wrong — which is exactly the point.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">Session App</span>
+          <h2>The main event</h2>
+          <div class="g2">
+            <img src="../assets/images/Silica-2.png" alt="Silica session app home screen showing all holodecks and their current status across a live store">
+            <img src="../assets/images/Silica-2.5.png" alt="Silica create session flow showing holodeck selection with live session states and queue management">
+          </div>
+          <p>The session app is the main event. It gives GEGs a live overview of the whole store — every Holodeck, every session, what's running, what's vacant, what's flagged.</p>
+          <p>From there it walks them through every step:</p>
+          <ul>
+            <li>Assign guests to a Holodeck</li>
+            <li>Confirm the experience, difficulty, any specific settings (Vertigo mode for Squid Game, for example)</li>
+            <li>Confirm player names, take guest photos for their personalised trailers</li>
+            <li>Loadout selection — guests pick weapons where the experience supports it</li>
+            <li>Check all hardware before anyone steps into the Holodeck</li>
+          </ul>
+          <img src="../assets/images/Silica-3.png" alt="Silica device check screen showing all player hardware confirmed ready before session launch" class="img-full">
+          <p class="caption">Device check — every piece of hardware confirmed in one view before launch</p>
+          <p>The device check screen is one I'm particularly happy with. Every piece of hardware confirmed in one view — Players, Server, Video — with individual player devices shown by name and team colour underneath. Nothing starts until everything's green.</p>
+          <img src="../assets/images/Silica-5.png" alt="Silica player swap screen showing options to reassign players across session slots" class="img-full">
+          <p class="caption">Player swap — searchable, sortable, handles mid-flow edge cases</p>
+          <p>Edge cases matter too. Need to swap a player mid-flow? The system shows you who's in session, who else is checked in, and players from other bookings — all searchable, sortable in a couple of taps.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">Design Challenge</span>
+          <h2>Designing for someone who doesn't care about the tech</h2>
+          <p>This was one of the more interesting design problems on the project. Silica needs to flag hardware issues — disconnected props, lag spikes, network problems — to staff who aren't technical. These aren't people who took the job because they love troubleshooting. They took it because it paid better than the place next door.</p>
+          <div class="pull"><p>Traffic lights. Green is fine. Amber, keep an eye on it. Red needs dealing with.</p></div>
+          <p>If it needs escalating beyond that, a deep link fires the full error detail straight to a Slack channel where the T1 support team can pick it up. The GEG doesn't need to know what's wrong. They just need to know who to hand it to.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">Video App</span>
+          <h2>The post-experience moment</h2>
+          <img src="../assets/images/Silica-4.png" alt="Silica video app showing completed trailer and selfie renders with cast and share controls" class="img-full">
+          <p class="caption">Video app — trailers, highlights, cast and share, all handled in-venue</p>
+          <p>Once the session wraps, guests head to the post-experience area. The video app takes over.</p>
+          <p>GEGs cast the personalised trailers and highlight reels to the TV, then share them — airdrop, email, text, QR code. If a render's failed, they can restart it on the spot without needing anyone technical in the room. Relevant upselling gets surfaced here too, at the right moment rather than shoved in somewhere awkward.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="reveal">
+          <span class="phase">Impact</span>
+          <h2>Where it is now</h2>
+          <p>We launched with two apps. Since then it's grown into a full fleet — prop management, check-in, booking management, fire alarms, and more. All on the same modular foundation.</p>
+          <p>Third-party integrations are gone. Updates roll out across the whole estate without touching unrelated parts of the system. What started as a contractor's rough first pass is now the thing that runs every Sandbox VR store in the world.</p>
+          <p>Not bad.</p>
+        </div>
+
+      </div>
+
+      <div class="sidebar">
+        <div class="stat reveal">
+          <div class="stat-n">2→∞</div>
+          <div class="stat-l">MVP apps grown into a full store operations fleet</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-n">100%</div>
+          <div class="stat-l">Of Sandbox VR venues globally running Silica</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-n">0</div>
+          <div class="stat-l">Third-party app dependencies remaining</div>
+        </div>
+        <div style="border:1px solid var(--rule);padding:20px;margin-top:12px;" class="reveal">
+          <p style="font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#4caf50;margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>Live in production</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.7;">Deployed across every Sandbox VR store in the world.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="next-project" href="sandbox-checkin.html">
+    <span class="next-project-label">Also at Sandbox VR</span>
+    <div class="next-project-eyebrow">UX Design · Mobile Web · 2024</div>
+    <h2 class="next-project-title">Killing the queue.</h2>
+    <p class="next-project-desc">Moving check-in off shared kiosks and onto guests' own phones — and shaving 20 minutes off a busy group's arrival.</p>
+    <div class="next-project-cta">
+      View case study
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+</main>
+
+<footer>
+  <span class="footer-copy">© 2026 Robert Stuart — Vancouver, BC</span>
+  <ul class="footer-links">
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</footer>
+
+<script src="../shared.js"></script>
+</body>
+</html>

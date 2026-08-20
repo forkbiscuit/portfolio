@@ -13,10 +13,12 @@
 .meta-item{display:flex;flex-direction:column;gap:6px}
 .meta-label{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
 .meta-val{font-size:15px;color:var(--ink)}
-.section{padding:80px 40px;border-bottom:1px solid var(--rule)}
+.section{padding:80px 40px;border-bottom:1px solid var(--rule);max-width:1800px;margin:0 auto}
 .grid{display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start}
 .sidebar{position:sticky;top:80px}
-.phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-bottom:16px}
+.phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-top:56px;margin-bottom:8px}
+.reveal:first-child .phase,.section:first-of-type .phase:first-child{margin-top:0}
+.phase+h2{margin-top:6px}
 h2{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px}
 h2:first-of-type{margin-top:0}
 p{font-size:16px;color:var(--ink-2);line-height:1.85;margin-bottom:16px}
@@ -120,9 +122,8 @@ ul.def-list li span{color:var(--ink-2)}
           <span class="phase">The Problem</span>
           <h2>Three kiosks. No autofill. Everyone queuing.</h2>
           <img src="../assets/images/CheckIn-1.png" alt="Figma canvas showing the full Check-in App user flow across Minor, Adult and Minor, and Adult paths" class="img-full">
-          <p>Three iPad kiosks. No autofill. No pre-loaded booking data. Every person in the group queuing up individually to enter their details from scratch.</p>
-          <p>A common scenario might see a group of ~25 people out for a corporate party or team-building event. With one kiosk, checking in 25 guests could take up to <strong>50 minutes</strong>. That's before anyone's put a headset on.</p>
-          <p>Beyond the time problem, there was a trust problem. Handing over personal information on a shared public screen isn't something everyone's comfortable with. We heard that clearly when we talked to both in-store staff and the internal ops and infrastructure teams — guests were visibly hesitant, and staff knew it.</p>
+          <p>A common scenario might see a group of ~25 people out for a corporate party or team-building event. With one kiosk, checking in 25 guests could take up to <strong>50 minutes</strong>. That's before anyone's even put a headset on.</p>
+          <p>Beyond the time constraint, there was a trust issue. Handing over personal information on a public shared screen isn't something everyone's comfortable with.</p>
         </div>
 
         <div class="divider"></div>
@@ -130,13 +131,13 @@ ul.def-list li span{color:var(--ink-2)}
         <div class="reveal">
           <span class="phase">Research &amp; Approach</span>
           <h2>Talking to the people who saw it every day</h2>
-          <p>We started by talking to people — in-store staff who watched the kiosk flow play out every day, and internal ops and infra teams who understood the system constraints. That gave us a clear picture of where the friction was and what mattered most to fix.</p>
+          <p>We started by talking to people — in-store staff who watched the kiosk flow play out every day, internal ops and infra teams who understood the system constraints and the most important stakeholder of all – the paying guest. That gave us a clear picture of where the friction was and what mattered most to fix.</p>
           <p>Two priorities came out of that:</p>
           <ul class="def-list">
-            <li><strong>Win trust from the start</strong><span>guests needed to feel comfortable handing over their details</span></li>
-            <li><strong>Cut check-in time</strong><span>especially for large groups and families</span></li>
+            <li><strong>Win trust from the start</strong><span>Guests needed to feel comfortable handing over their details</span></li>
+            <li><strong>Cut check-in time</strong><span>Especially for large groups and families with children</span></li>
           </ul>
-          <p>From there we mapped the existing flow, looked hard at where steps could be cut or collapsed, and wireframed a leaner version. We used <strong>Figma Make</strong> to get a rough POC in front of people quickly before moving to HiFi, then ran internal user testing before launch.</p>
+          <p>From there we mapped the existing flow, looked hard at where steps could be cut or collapsed, and wireframed a leaner version. We used <strong>Figma Make</strong> and <strong>Claude</strong> to get a rough POC in front of internal teams quickly before moving to HiFi, then ran a few rounds of internal user testing and iteration before launching to a selection of test stores.</p>
         </div>
 
         <div class="divider"></div>
@@ -148,10 +149,9 @@ ul.def-list li span{color:var(--ink-2)}
             <img src="../assets/images/CheckIn-2.png" alt="Mobile check-in screen asking guests to select: An Adult, An Adult and Minors, or Minor(s)">
             <img src="../assets/images/CheckIn-3.png" alt="Mobile screen for entering minor guest names with option to add additional minors">
           </div>
-          <p>A mobile web app. Guests scan a QR code — either from a confirmation email before they arrive, or from the kiosk when they get to the venue — and check in on their own phone in their own browser.</p>
-          <p>The first question is simple: <strong>who's checking in?</strong> An adult, an adult and minors, or minors only. That single choice branches the flow correctly and sets everything up from there.</p>
-          <p>Personal info comes first — the booker enters their own details. If there are minors in the group, they're added afterwards, with the parent signing the waiver on their own device on behalf of their kids. No separate kiosk flow. No second queue. One parent handles the whole family.</p>
-          <p>The waiver is signed digitally, in the same flow, on the guest's own phone. That's the trust piece — it's your device, your browser, your data. Not a shared screen.</p>
+          <p>Out of this testing was born a mobile web app. Guests scan a QR code on the kiosks instead of typing everything into there, or, more preferably, check-in with a link they recieved via email before they arrive and check in on their own phone in their own browser. </p>
+          <p>Personal info comes first — the booker enters their own details. Most devices allow for auto-fill so even the multiple fields asking names and email address can be quickly completed.</p>
+          <p>If there are minors in the group, they're added after either the parent or guardian fills in their own information, with them signing the waiver on their own device on behalf of the kids in their party. No separate kiosk flow. No second queue. The goal was one adult able to handle the whole family.</p>
           <div class="pull"><p>From not checked in to fully ready: 5 steps.</p></div>
         </div>
 
@@ -161,17 +161,17 @@ ul.def-list li span{color:var(--ink-2)}
           <span class="phase">The Flow in Detail</span>
           <h2>Simple surface, complex underneath</h2>
           <img src="../assets/images/CheckIn-4.png" alt="Complete user flow diagram showing all check-in paths including waiver signing and confirmation states" class="img-full">
-          <p>The flow handles three distinct paths — adult only, adult with minors, and minors only — all branching from that first screen. Edge cases are covered too: removing a player, error states, language selection, future booking states. The full flow map gives a sense of how much complexity sits underneath what feels like a simple 5-step process.</p>
+          <p>The flow handles three distinct paths — adult only, adult with minors, and minors only — all branching from that first screen. Edge cases are covered too: removing a player, checking-in too many players to one booking, language selection for each player, upselling on future sessions as well as food and beverages. The full flow map gives a sense of how much complexity sits underneath what feels like a simple 5-step process.</p>
         </div>
 
         <div class="divider"></div>
 
         <div class="reveal">
           <span class="phase">Impact</span>
-          <h2>20 minutes back, per group</h2>
-          <p>A group of 25 used to take around 22 minutes to get through check-in. Now, everyone checks in simultaneously on their own phone. <strong>The whole group is through in under 2 minutes.</strong></p>
-          <p>That's roughly 20 minutes back — per large group booking. Multiply that across a busy weekend and it's a meaningful operational shift. Faster throughput, less pressure on staff, and guests arriving at their experience in a better headspace than they would after queuing at a kiosk for 20 minutes.</p>
-          <p>The kiosk is still there as a fallback. But for most guests, they don't need to touch it at all.</p>
+          <h2>Up to 50 minutes back, per group</h2>
+          <p>A single guest took around 2 minutes to get through check-in on the kiosks. Now, everyone checks in simultaneously on their own phone. <strong>The whole group is through in under 2 minutes.</strong></p>
+          <p>That's roughly 50 minutes back for a group of 25. Multiply that across a busy weekend and it's a huge operational shift freeing up staff to help improve the experience elsewhere. Faster throughput, less pressure on staff, and guests arriving at their experience in a better headspace than they would after queuing at a kiosk.</p>
+          <p>The kiosk is still there as a fallback for guests without a mobile device, but for most guests, they don't need to touch it.</p>
         </div>
 
       </div>
@@ -190,7 +190,7 @@ ul.def-list li span{color:var(--ink-2)}
           <div class="stat-l">of the guest journey handled on their own device</div>
         </div>
         <div style="border:1px solid var(--rule);padding:20px;margin-top:12px;" class="reveal">
-          <p style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>Live in production</p>
+          <p style="font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#4caf50;margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="currentColor" style="vertical-align:-2px;margin-right:6px;"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>Live in production</p>
           <p style="font-size:15px;color:var(--ink-2);line-height:1.7;">Deployed across all Sandbox VR stores globally.</p>
         </div>
       </div>
