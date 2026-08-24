@@ -40,7 +40,15 @@
   .featured-link:hover .featured-link-arrow { background:var(--accent);border-color:var(--accent); }
   .featured-link-arrow svg { width:14px;height:14px;stroke:var(--ink-3);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s; }
   .featured-link:hover .featured-link-arrow svg { stroke:var(--bg); }
-  @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .case-body-grid > div:last-child{position:static;} .img-grid{grid-template-columns:1fr;} .case-nav{padding:24px 20px;} }
+  .lb-img { cursor:zoom-in; }
+  .lb-overlay { display:none;position:fixed;inset:0;z-index:1000;background:rgba(13,13,11,.92);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:40px; }
+  .lb-overlay.open { display:flex; }
+  .lb-img-wrap { position:relative;max-width:90vw;max-height:88vh;display:flex;align-items:center;justify-content:center; }
+  .lb-overlay img { max-width:100%;max-height:88vh;object-fit:contain;border:1px solid var(--rule);display:block; }
+  .lb-close { position:fixed;top:20px;right:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--bg-2);border:1px solid var(--rule);cursor:pointer;transition:border-color .2s,background .2s;z-index:1001; }
+  .lb-close:hover { border-color:var(--ink-2);background:var(--bg-3); }
+  .lb-close svg { width:14px;height:14px;stroke:var(--ink-2);fill:none;stroke-width:1.5;stroke-linecap:round; }
+  @media (max-width:768px) { .case-meta-bar{padding:24px 20px;gap:24px;} .case-body-grid{grid-template-columns:1fr;gap:40px;} .case-body-grid > div:last-child{position:static;} .img-grid{grid-template-columns:1fr;} .case-nav{padding:24px 20px;} .lb-overlay{padding:20px;} }
 </style>
 </head>
 <body>
@@ -111,12 +119,8 @@
           <p>Organised by engineering managers within FACEIT, we ran a 24-hour hackathon. Alongside a PM and two developers, I created a fully functional prototype of a platform-wide domination game — players earned points through matches and spent them to deploy and battle communities for control of a map.</p>
 
           <div class="img-grid">
-            <img src="../assets/images/faceit-hackathon-Onboarding-01.png" alt="Hackathon onboarding">
-            <img src="../assets/images/faceit-hackathon-landing.png" alt="Hackathon map">
-          </div>
-          <div class="img-grid">
-            <img src="../assets/images/faceit-hackathon-feature-loop.png" alt="Feature loop">
-            <img src="../assets/images/faceit-hackathon-Recruiting-01.png" alt="Points balancing">
+            <img src="../assets/images/Hackathon-3.png" alt="Hackathon" class="lb-img">
+            <img src="../assets/images/Hackathon4.gif" alt="Hackathon" class="lb-img">
           </div>
         </div>
 
@@ -190,6 +194,29 @@
   </ul>
 </footer>
 
+<div class="lb-overlay" id="lbOverlay">
+  <button class="lb-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="lb-img-wrap">
+    <img id="lbImg" src="" alt="">
+  </div>
+</div>
+
 <script src="../shared.js"></script>
+<script>
+(function() {
+  var overlay = document.getElementById('lbOverlay');
+  var lbImg = document.getElementById('lbImg');
+  function open(src, alt) { lbImg.src = src; lbImg.alt = alt; overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close() { overlay.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
+  document.querySelectorAll('.lb-img').forEach(function(img) {
+    img.addEventListener('click', function() { open(this.src, this.alt); });
+  });
+  document.getElementById('lbClose').addEventListener('click', close);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+})();
+</script>
 </body>
 </html>
