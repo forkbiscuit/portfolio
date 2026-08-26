@@ -13,10 +13,12 @@
 .meta-item{display:flex;flex-direction:column;gap:6px}
 .meta-label{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
 .meta-val{font-size:15px;color:var(--ink)}
-.section{padding:80px 40px;border-bottom:1px solid var(--rule)}
+.section{padding:80px 40px;border-bottom:1px solid var(--rule);max-width:1800px;margin:0 auto}
 .grid{display:grid;grid-template-columns:2fr 1fr;gap:80px;align-items:start}
 .sidebar{position:sticky;top:80px}
-.phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-bottom:16px}
+.phase{display:inline-block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);padding:4px 10px;margin-top:56px;margin-bottom:8px}
+.reveal:first-child .phase,.section:first-of-type .phase:first-child{margin-top:0}
+.phase+h2{margin-top:6px}
 h2{font-family:'Unbounded',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:300;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px}
 h2:first-of-type{margin-top:0}
 h3{font-family:'Jost',sans-serif;font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);margin:32px 0 12px}
@@ -112,7 +114,6 @@ ul.def-list li span{color:var(--ink-2)}
 
         <div class="reveal">
           <span class="phase">Context</span>
-          <span class="phase">The Problem</span>
           <h2>The problem</h2>
           <p>Moving to the Community team in February 2022, I was tasked with changing how players experienced community on FACEIT. The target was ambitious: <strong>4X the number of matches played within communities</strong> — taking Monthly Active Players from 100k to 400k, split 300k Counter-Strike and 100k non-CS.</p>
           <p>At the time, communities were split into Hubs and Clans — two separate entities operating just differently enough to confuse new players entirely. To map the chaos, I created an illustrated guide for the wider design and PM team before we touched anything.</p>
@@ -122,7 +123,6 @@ ul.def-list li span{color:var(--ink-2)}
         <div class="divider"></div>
 
         <div class="reveal">
-          <span class="phase">Research</span>
           <span class="phase">Research</span>
           <h2>Understanding the space</h2>
           <p>Community touches almost every aspect of FACEIT — we couldn't wade in without thinking about UX implications at a larger scale than just changing one section. The research phase included user interviews, story mapping, internal and external user tests, requirement gathering from senior management, and conversations with stakeholders who'd been part of the original hubs and clans.</p>
@@ -142,7 +142,6 @@ ul.def-list li span{color:var(--ink-2)}
 
         <div class="reveal">
           <span class="phase">North Star</span>
-          <span class="phase">Scope</span>
           <h2>Centralisation</h2>
           <p>Out of the interviews a clear north star emerged — one unified community model instead of two confusing ones. From that, we defined six pillars the solution needed to deliver:</p>
           <ul class="def-list">
@@ -160,11 +159,9 @@ ul.def-list li span{color:var(--ink-2)}
 
         <div class="reveal">
           <span class="phase">IA and Wireframes</span>
-          <span class="phase">Information Architecture</span>
           <h2>Story mapping and structure</h2>
           <p>Story mapping grounded the earliest wireframes in real user behaviour — themes, activities, and individual stories built from the organiser interviews. The solution had to be <strong>mobile-first</strong>: community is always-on, so a friend DMing you to play CS while you're on the sofa is exactly the entry point we were designing for. A three-panel layout gave us flexibility across screen sizes with clear navigation, main content, and a contextual third panel.</p>
-          <img src="../assets/images/Frame 1115.png" alt="Story map" class="img-full">
-          <p class="caption">Story map — themes, activities, and user stories</p>
+
           <img src="../assets/images/Option A.png" alt="IA" class="img-full">
           <p class="caption">Information hierarchy for the community MVP</p>
           <div class="g2">
@@ -201,7 +198,6 @@ ul.def-list li span{color:var(--ink-2)}
 
         <div class="reveal">
           <span class="phase">Hi-fi Design</span>
-          <span class="phase">Design</span>
           <h2>Going hi-fi</h2>
           <p>After stakeholder sign-off we moved to high-fidelity using FUSE — FACEIT's internal design system. The most significant structural shift was simplifying the left-hand sidebar: moving navigation to a global bottom bar freed the left rail for switching between communities, mirroring patterns players already knew from the FACEIT native app and indirect competitors. Those components are live in production today as the FUSE Panel component.</p>
           <p>One deliberate design decision: I reframed Events beyond tournaments. Communities aren't built on competition alone — they're built on people coming together and having fun. Introducing <strong>Social Gaming events</strong> let organisers create low-pressure sessions away from ELO anxiety.</p>
@@ -252,7 +248,6 @@ ul.def-list li span{color:var(--ink-2)}
 
         <div class="reveal">
           <span class="phase">Outcome</span>
-          <span class="phase">Impact</span>
           <h2>What this work unlocked</h2>
           <p>Four months of research-led design produced something that went beyond the brief. The three-panel layout became the <strong>Panel component in FUSE</strong> — now live in production across FACEIT's platform. The centralisation concept earned genuine organiser buy-in before a single line of code was written. And the 85% bounce rate problem had a clear, validated path to resolution.</p>
           <p>But the bigger outcome was less visible. When a senior designer on FACEIT's core Play XP team left unexpectedly, leadership didn't look outside. They looked at who had demonstrated the right combination of skills: deep platform knowledge, the ability to move fast on ambiguous problems, and the track record of bringing rigour to complex UX challenges.</p>
