@@ -91,7 +91,7 @@
           <span class="phase">Overview</span>
           <h2>Context</h2>
           <p>When I joined Sandbox VR in July 2023, the design foundation was a few screenshots from a flashy presentation they recieved as part of their initial branding. Four brand hex colours, some glamour shots of a concept store and a few photos of people posing with foam VR goggles on. That was the starting line.</p>
-          <p>Developers were hardcoding everything. Every button, every text input, all built from scratch, every single time, often slightly differently as the tech debt mounted over years of not having a single source of truth. Very little was reusable. Nothing was consistent.</p>
+          <p>Engineers were hardcoding everything. Every button, every text input, all built from scratch, every single time, often slightly differently as the tech debt mounted over years of not having a single source of truth. Very little was reusable. Nothing was consistent.</p>
         </div>
 
         <div class="reveal">
@@ -100,7 +100,7 @@
           <p>Over the years of "scrappy startup" building, the tech debt from inconsistent was huge. Often the approach was a "sack it off, just make it again" instead of trying to pick apart what was already there. The UI system had to work across two very different environments. There's the digital product: booking flows, experience pages, marketing campaign pages, account stuff, and then there's the physical in-store world — signage, hardware interfaces, in-venue UX. Both needed to feel like the same thing and were, when I joined, hugely disjointed</p>
           <p>The star</p>
           <ul>
-            <li>Devs rebuilding UI from scratch on every ticket</li>
+            <li>Engineers rebuilding UI from scratch on every ticket</li>
             <li>Type, colour, and spacing all over the place</li>
             <li>No handoff process — visual decisions lived in people's heads and were vibes-based</li>
             <li>Each new project or partnership with companies such as Netflix meant starting from the beginning every time</li>
@@ -114,7 +114,7 @@
           <p class="img-caption">Colour tokens and typography scale across light and dark modes</p>
           <p>I started with primitives as I wanted to build this atomically. Enter raw values on an atomic level, then point semantic tokens towards these raw values. </p>
           <p>At the primitive level, tokens used code-style naming that would slot better into a "set it and forget it", i.e. blue/700, darkGrey-alt/50 etc. </p>
-          <p>The semantic level that sat above that and makes things human-readable — color/surface/base, color/text/high, color/icon/full referenced back to these initial values. Designers and devs talked in semantics, not the other way round. This second layer meant that if a value changes — new theme, dark mode update, everyone discovers that the colour blue is actually horrible — you change it once, at the primitive level, and it cascaded through everything.</p>
+          <p>The semantic level that sat above that and makes things human-readable — color/surface/base, color/text/high, color/icon/full referenced back to these initial values. Designers and Engineers talked in semantics, not the other way round. This second layer meant that if a value changes — new theme, dark mode update, everyone discovers that the colour blue is actually horrible — you change it once, at the primitive level, and it cascaded through everything.</p>
           <p>Typography got a full overhaul too. When I joined, type was a mess — forced bold here, italic there, very little logic as to what it actually should be. Replaced it with a proper scale, H1 down through titles, subheads, body and utility styles.</p>
         </div>
 
